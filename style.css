@@ -15,7 +15,7 @@ body {
     height: 50px;
 }*/
 .petition {
-  background-color: rgb(194, 225, 255)55);
+  background-color: rgb(194, 225, 255);
   width: 69%;
   height: 850px;
   display: inline-block;
@@ -24,9 +24,7 @@ body {
   overflow: auto;
   vertical-align: top;
 }
-.petition p {
-  
-  }
+
 .comments-container {
   background-color: rgb(167, 167, 167);
   height: 850px;
@@ -41,7 +39,6 @@ body {
   height: 100px;
 }
 .content {
-  
   display: inline;
   vertical-align: top;
 }
