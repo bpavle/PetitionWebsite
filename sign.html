@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Потпиши</title>
+</head>
+
+<body>
+    <div class="head">
+
+    </div>
+    <div class="navigation">
+
+        <a href="index.html">Насловна</a>
+        <a href="#news">Петиција</a>
+        <a href="#news">Вести</a>
+        <a href="sign.html">Потпиши</a>
+        <div class="dropdown">
+            <button class="dropbtn">Организација
+
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Улогуј се</a>
+                <a href="#">Регисрација</a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <h1>ПОТПИШИ ПЕТИЦИЈУ!</h1>
+        <table>
+            <form>
+                <tr>
+                    <td> Име:</td>
+                    <td> <input type="text" name="ime"></td>
+                </tr>
+                <tr>
+                    <td> Презиме:</td>
+                    <td> <input type="text" name="prezime"></td>
+                </tr>
+                <tr>
+                    <td> e-mail:</td>
+                    <td> <input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td> Број телефона:</td>
+                    <td> <input type="text" name="tel"></td>
+                </tr>
+                <tr>
+                    <td> Број личне карте:</td>
+                    <td> <input type="text" name="broj_lk"></td>
+                </tr>
+                <tr>
+                    <td> Датум:</td>
+                    <td> <input type="date" name="datum"></td>
+                </tr>
+                <tr>
+                    <td> Време:</td>
+                    <td> <input type="time" name="vreme"></td>
+                </tr>
+                <tr>
+                    <td> Објавити потпис?</td>
+                    <td> <input type="radio" name="javno">ДА
+                        <input type="radio" name="javno">НЕ</td>
+                </tr>
+                <tr>
+                    <td>Коментар:</td>
+                    <td><textarea id="message" class="input" cols="30" name="message" rows="6"></textarea></td>
+                    <!--<td>Коментар:</td><td><input type="text-area" name="komentar"></td>-->
+                </tr>
+                <tr >
+                   <td colspan="2"> <button>Пошаљи</button></td>
+                </tr>
+            </form>
+        </table>
+    </div>
+
+</body>
+
+</html>
