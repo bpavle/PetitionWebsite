@@ -15,14 +15,15 @@ body {
     height: 50px;
 }*/
 .petition {
-  background-color: rgb(194, 225, 255);
-  width: 69%;
+  background-color: rgb(206, 219, 231);
+  width: 70%;
   height: 850px;
   display: inline-block;
   padding: 2%;
   box-sizing: border-box;
   overflow: auto;
   vertical-align: top;
+  margin-left: -4px;
 }
 
 .comments-container {
