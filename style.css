@@ -78,6 +78,9 @@ body {
   border-style: solid;
   border-radius: 5px;
 }
+form input {
+  width: 100%;
+}
 /* Prepisano sa W3school*/
 .navigation {
   overflow: hidden;
