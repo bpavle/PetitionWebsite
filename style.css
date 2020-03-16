@@ -15,15 +15,19 @@ body {
     height: 50px;
 }*/
 .petition {
-  background-color: rgb(206, 219, 231);
+  background-color: rgb(255, 255, 255);
   width: 70%;
   height: 850px;
   display: inline-block;
   padding: 2%;
+  padding-left: 5%;
   box-sizing: border-box;
   overflow: auto;
   vertical-align: top;
   margin-left: -4px;
+}
+.petition h2 {
+  text-align: center;
 }
 
 .comments-container {
@@ -40,8 +44,10 @@ body {
   height: 100px;
 }
 .content {
-  display: inline;
-  vertical-align: top;
+  display: flex;
+
+  align-content: center;
+  align-self: center;
 }
 /* Prepisano sa W3school*/
 .navigation {
