@@ -230,3 +230,26 @@ body {
   font-size: 50px;
   padding-left: 30%;
 }
+<<<<<<< HEAD
+=======
+
+#table{
+  border-collapse: collapse;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#table td, #table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+>>>>>>> cc860069989b2430a5fd2cc34fcab2231edb30b0
