@@ -122,3 +122,10 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+.news{
+  margin-left: 20%;
+  margin-right: 20%;
+
+}
