@@ -151,32 +151,32 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
+/*do ovde je prepisano sa w3school*/
 .news {
   margin-left: 20%;
   margin-right: 20%;
-
 }
-
-.links:hover{
+.news dd {
+  height: 60px;
+  overflow: auto;
+}
+.links:hover {
   color: red;
-  
 }
-.links:link{
+.links:link {
   color: inherit;
   text-decoration: none;
 }
 
 .links:active {
   color: lightgreen;
-} 
-.links{
+}
+.links {
   font-size: 30px;
   color: inherit;
 }
 
-#news-h1{
+#news-h1 {
   font-size: 50px;
   padding-left: 30%;
-  
 }
