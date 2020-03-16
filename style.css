@@ -45,9 +45,7 @@ body {
 }
 .content {
   display: inline-block;
-
-  align-content: center;
-  align-self: center;
+  text-align: center;
   width: 100%;
 }
 
@@ -78,15 +76,20 @@ body {
   display: block;
   border-style: solid;
   border-radius: 5px;
-  align-self: center;
   padding: 1%;
   width: fit-content;
+  margin: auto;
+  text-align: left;
+  font-size: 16px;
 }
 .form input {
   width: 100%;
   align-self: center;
 }
 
+.form-container {
+  padding-top: 3%;
+}
 /* Prepisano sa W3school*/
 .navigation {
   overflow: hidden;
