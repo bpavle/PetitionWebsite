@@ -44,14 +44,15 @@ body {
   height: 100px;
 }
 .content {
-  display: flex;
+  display: inline-block;
 
   align-content: center;
   align-self: center;
+  width: 100%;
 }
 
 .btn {
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -59,6 +60,31 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  width: 100%;
+}
+.btn:hover {
+  background-color: #3a883e;
+}
+.btn:active {
+  background-color: #aadaac;
+  color: black;
+  border: none;
+  border-style: none;
+}
+.btn:focus {
+  outline: none;
+}
+.form {
+  display: block;
+  border-style: solid;
+  border-radius: 5px;
+  align-self: center;
+  padding: 1%;
+  width: fit-content;
+}
+.form input {
+  width: 100%;
+  align-self: center;
 }
 
 /* Prepisano sa W3school*/
@@ -123,8 +149,7 @@ body {
   display: block;
 }
 
-
-.news{
+.news {
   margin-left: 20%;
   margin-right: 20%;
 
