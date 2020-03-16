@@ -161,8 +161,13 @@ body {
   margin-right: 20%;
 }
 .news dd {
-  height: 60px;
-  overflow: auto;
+  height: 40px;
+  
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  width: 760px;
+  white-space: nowrap;
+
 }
 .links:hover {
   color: red;
