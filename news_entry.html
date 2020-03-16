@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Унос нове вести</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+
+
+
+
+
+<body>
+  <div class="head"></div>
+  <div class="navigation">
+    <a href="index.html">Насловна</a>
+    <a href="petition.html">Петиција</a>
+    <a href="news.html">Вести</a>
+    <a href="sign.html">Потпиши</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">Организација</button>
+      <div class="dropdown-content">
+
+        <a href="registration.html">Регистрација</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Унос</button>
+      <div class="dropdown-content">
+        <a href="news_entry.html">Унос вести</a>
+        <a href="organizer_entry.html">Унос организатора</a>
+        <a href="#">Унос локације</a>
+      </div>
+    </div>
+
+    <a href="#">Локације</a>
+    <a href="#">Организатори</a>
+    <a href="#">Комплетни потписи</a>
+    <a href="index.html">Излогујте се</a>
+  </div>
+
+
+
+<div class="content">
+    <div class="form-container">
+    <h1><b>Унос нове вести</b></h1>
+    <div class="form">
+    <table>
+        <form>
+            <tr>
+                <td> Наслов:</td>
+                <td> <input type="text" name="naslov"></td>
+            </tr>
+        
+            <tr>
+                <td> Датум:</td>
+                <td> <input type="date" name="datum"></td>
+            </tr>
+            
+          
+            <tr>
+                <td>Вест:</td>
+                <td><textarea id="message" class="input" cols="133" name="message" rows="10"></textarea></td>
+                <!--<td>Коментар:</td><td><input type="text-area" name="komentar"></td>-->
+            </tr>
+            <tr >
+              <td colspan="2"> <button class = "btn">Постави</button></td>
+            </tr>
+        </form>
+    </table>
+</div>
+
+
+</body>
+</html>
