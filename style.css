@@ -48,6 +48,7 @@ body {
 
   align-content: center;
   align-self: center;
+  width: 100%;
 }
 
 .btn {
@@ -77,10 +78,15 @@ body {
   display: block;
   border-style: solid;
   border-radius: 5px;
+  align-self: center;
+  padding: 1%;
+  width: fit-content;
 }
-form input {
+.form input {
   width: 100%;
+  align-self: center;
 }
+
 /* Prepisano sa W3school*/
 .navigation {
   overflow: hidden;
@@ -143,9 +149,7 @@ form input {
   display: block;
 }
 
-
-.news{
+.news {
   margin-left: 20%;
   margin-right: 20%;
-
 }
