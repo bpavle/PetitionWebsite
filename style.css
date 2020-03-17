@@ -82,7 +82,7 @@ body {
   background-color: #4b4b4bd2;
 }
 .btn:active {
-  background-color: #aadaac;
+  background-color: #c0c0c0;
   color: black;
   border: none;
   border-style: none;
@@ -104,7 +104,7 @@ body {
   background: rgba(255, 255, 255, 0.7);
 }
 #login {
-  width: 30%;
+  width: 25%;
   height: 70%;
 }
 #login input {
@@ -228,19 +228,17 @@ body {
 
 #news-h1 {
   font-size: 50px;
-  padding-left: 30%;
 }
-<<<<<<< HEAD
-=======
 
-#table{
+#table {
   border-collapse: collapse;
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
 }
 
-#table td, #table th {
+#table td,
+#table th {
   border: 1px solid #ddd;
   padding: 8px;
 }
@@ -252,4 +250,3 @@ body {
   background-color: black;
   color: white;
 }
->>>>>>> cc860069989b2430a5fd2cc34fcab2231edb30b0
