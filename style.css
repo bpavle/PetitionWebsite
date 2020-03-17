@@ -16,9 +16,17 @@ body {
   margin: 0 0 0 0;
 }
 .head {
+  color: white;
+  padding-top: 1%;
+
+  font-size: 45px;
+  text-align: center;
+  margin: auto;
+
   background-color: black;
-  height: 10px;
+  background-size: 100px;
   width: 100%;
+  height: fit-content;
 }
 /*.navigation{
     background-color: bisque;
@@ -44,7 +52,7 @@ body {
 
 .comments-container {
   background-color: rgba(167, 167, 167, 0.8);
-  height: 850px;
+  height: 700px;
   overflow: auto;
   width: 30%;
   display: inline-block;
