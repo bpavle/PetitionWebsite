@@ -79,6 +79,11 @@ body {
   );
   overflow: hidden;
 }
+.content p {
+  font-weight: bold;
+  text-align: left;
+  padding: 2%;
+}
 
 .btn {
   background-color: #000000af;
