@@ -146,6 +146,10 @@ body {
 .form table td {
   padding: 0.5%;
 }
+.bata {
+  background-color: ivory;
+  /*TAG ZA BATU*/
+}
 .form textarea {
   width: 100%;
 }
