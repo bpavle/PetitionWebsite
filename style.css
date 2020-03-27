@@ -296,3 +296,12 @@ body {
   );
   border-radius: 10px;
 }
+
+.list{
+  
+  list-style-position: inside;
+  font-size: x-large;
+  margin-top: 5%;
+  text-align: center;
+  line-height: 200%;
+}
