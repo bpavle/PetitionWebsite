@@ -78,6 +78,7 @@ body {
     rgb(45, 0, 128)
   );
   overflow: hidden;
+  margin-bottom: -3px;
 }
 .content p {
   font-weight: bold;
