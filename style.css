@@ -310,3 +310,11 @@ body {
   text-align: center;
   line-height: 200%;
 }
+
+#head-content {
+  display: inline-flex;
+}
+#naslov {
+  text-align: center;
+  align-self: center;
+}
