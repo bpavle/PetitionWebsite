@@ -66,6 +66,8 @@ body {
 }
 .comment {
   height: 100px;
+  text-align: left;
+  overflow: ellipsis;
 }
 .content {
   display: inline-block;
@@ -321,4 +323,15 @@ body {
   text-align: center;
   line-height: 200%;
 }
+<<<<<<< HEAD
 >>>>>>> 0496a618c9a713f3558a6549a08d7a800b54cf37
+=======
+
+#head-content {
+  display: inline-flex;
+}
+#naslov {
+  text-align: center;
+  align-self: center;
+}
+>>>>>>> 7857c2b1abf166a45851ad13240349d0a0ad21a9
