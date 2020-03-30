@@ -66,6 +66,8 @@ body {
 }
 .comment {
   height: 100px;
+  text-align: left;
+  overflow: ellipsis;
 }
 .content {
   display: inline-block;
