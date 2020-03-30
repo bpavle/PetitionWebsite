@@ -9,6 +9,7 @@ a:visited {
 html {
   width: 100%;
   height: 100%;
+  overflow: overlay;
 }
 body {
   width: 100%;
@@ -19,7 +20,7 @@ body {
   color: white;
   padding-top: 1%;
 
-  font-size: 45px;
+  font-size: 40px;
   text-align: center;
   margin: auto;
 
@@ -28,12 +29,15 @@ body {
   width: 100%;
   height: fit-content;
 }
+.head h1 {
+  margin: 0 0 0 0;
+}
 /*.navigation{
     background-color: bisque;
     height: 50px;
 }*/
 .petition {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
   width: 70%;
   height: 100%;
   display: inline-block;
@@ -51,7 +55,7 @@ body {
 }
 
 .comments-container {
-  background-color: rgba(167, 167, 167, 0.8);
+  background-color: rgba(167, 167, 167, 0.2);
   height: 100%;
   overflow: auto;
   width: 30%;
@@ -71,9 +75,15 @@ body {
   background-image: radial-gradient(
     rgb(0, 247, 255),
     rgb(0, 183, 255),
-    rgb(81, 0, 128)
+    rgb(45, 0, 128)
   );
   overflow: hidden;
+  margin-bottom: -3px;
+}
+.content p {
+  font-weight: bold;
+  text-align: left;
+  padding: 2%;
 }
 
 .btn {
@@ -142,6 +152,13 @@ body {
 .form table td {
   padding: 0.5%;
 }
+.bata {
+  background-color: ivory;
+  /*TAG ZA BATU*/
+}
+.form textarea {
+  width: 100%;
+}
 .form-container {
   padding-top: 0.1%;
   height: 100%;
@@ -149,10 +166,19 @@ body {
 /* Prepisano sa W3school*/
 .navigation {
   overflow: hidden;
+<<<<<<< HEAD
   
   padding-left: 19%;
   background-color: #333;
   
+=======
+  /*background-color: #333;*/
+  background-image: radial-gradient(
+    rgb(158, 158, 158),
+    rgb(68, 68, 68),
+    rgb(32, 32, 32)
+  );
+>>>>>>> 0496a618c9a713f3558a6549a08d7a800b54cf37
 }
 
 .navigation a {
@@ -265,3 +291,34 @@ body {
   color: black;
 }
 
+<<<<<<< HEAD
+=======
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: radial-gradient(
+    rgb(0, 247, 255),
+    rgb(0, 183, 255),
+    rgb(81, 0, 128)
+  );
+  border-radius: 10px;
+}
+
+.list {
+  list-style-position: inside;
+  font-size: x-large;
+  margin-top: 5%;
+  text-align: center;
+  line-height: 200%;
+}
+>>>>>>> 0496a618c9a713f3558a6549a08d7a800b54cf37

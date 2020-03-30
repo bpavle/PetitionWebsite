@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
 
 <head>
 
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Логовање</title>
+    <title>Потпиши</title>
 </head>
 
 <body>
@@ -27,38 +26,56 @@
 
             </button>
             <div class="dropdown-content">
-                <a href="#">Улогуј се</a>
+                <a href="login.html">Улогуј се</a>
                 <a href="registration.html">Регистрација</a>
 
             </div>
         </div>
         <a href="contact.html">Контакт</a>
-
     </div>
 
     <div class="content">
+        <h1>Контакт</h1>
+         <b>Директор сајта: Александара Мићић <br> tel. 064123445872 <br>email:docadoca@gmail.com</b>
+        
         <div class="form-container">
-        <h1>Логовање</h1>
-        <div class="form" id="login">
+        
+        
+          
+        
+        <div class="form">
         <table>
             <form>
                 <tr>
-                    
-                    <td>е-mail: <input type="text" name="ime"></td>
+                    <td> Име:</td>
+                    <td> <input type="text" name="ime"></td>
                 </tr>
                 <tr>
-                    
-                    <td>Шифра: <input type="password" name="prezime"></td>
+                    <td> Презиме:</td>
+                    <td> <input type="text" name="prezime"></td>
+                </tr>
+                <tr>
+                    <td> e-mail:</td>
+                    <td> <input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td> Број телефона:</td>
+                    <td> <input type="text" name="tel"></td>
+                </tr>
+               
+               <tr>
+                    <td>Коментар:</td>
+                    <td><textarea id="message" class="input" cols="60" name="message" rows="10"></textarea></td>
+                    <!--<td>Коментар:</td><td><input type="text-area" name="komentar"></td>-->
                 </tr>
                 <tr >
-                    
-                  <td> <button class = "btn" style="margin-top: 10%;"><a href="admin.html";> Улогуј се</a></button></td>
-                  
+                  <td colspan="2"> <button class = "btn">Пошаљи</button></td>
                 </tr>
             </form>
         </table>
     </div>
     </div>
+</div>
 
 </body>
 
