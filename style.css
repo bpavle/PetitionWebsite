@@ -65,9 +65,18 @@ body {
   vertical-align: top;
 }
 .comment {
-  height: 100px;
+  /*height: 100px;
   text-align: left;
-  overflow: ellipsis;
+  overflow: ellipsis;*/
+ 
+
+display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   text-align: left;
+ 
 }
 .content {
   display: inline-block;
@@ -168,19 +177,16 @@ body {
 /* Prepisano sa W3school*/
 .navigation {
   overflow: hidden;
-<<<<<<< HEAD
   
-  padding-left: 19%;
+  padding-left: 12%;
   background-color: #333;
   
-=======
   /*background-color: #333;*/
   background-image: radial-gradient(
     rgb(158, 158, 158),
     rgb(68, 68, 68),
     rgb(32, 32, 32)
   );
->>>>>>> 0496a618c9a713f3558a6549a08d7a800b54cf37
 }
 
 .navigation a {
@@ -293,8 +299,7 @@ body {
   color: black;
 }
 
-<<<<<<< HEAD
-=======
+
 /* width */
 ::-webkit-scrollbar {
   width: 20px;
@@ -323,9 +328,7 @@ body {
   text-align: center;
   line-height: 200%;
 }
-<<<<<<< HEAD
->>>>>>> 0496a618c9a713f3558a6549a08d7a800b54cf37
-=======
+
 
 #head-content {
   display: inline-flex;
@@ -334,4 +337,10 @@ body {
   text-align: center;
   align-self: center;
 }
->>>>>>> 7857c2b1abf166a45851ad13240349d0a0ad21a9
+
+.text{
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size:large;
+}
+
