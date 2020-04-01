@@ -68,15 +68,13 @@ body {
   /*height: 100px;
   text-align: left;
   overflow: ellipsis;*/
- 
 
-display: -webkit-box;
-   -webkit-line-clamp: 3;
-   -webkit-box-orient: vertical;
-   overflow: hidden;
-   text-overflow: ellipsis;
-   text-align: left;
- 
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
 }
 .content {
   display: inline-block;
@@ -175,32 +173,33 @@ display: -webkit-box;
   height: 100%;
 }
 /* Prepisano sa W3school*/
+#nav-container {
+  text-align: center;
+  display: inline-flex;
+}
 .navigation {
   overflow: hidden;
-  
-  padding-left: 12%;
   background-color: #333;
-  
   /*background-color: #333;*/
   background-image: radial-gradient(
     rgb(158, 158, 158),
     rgb(68, 68, 68),
     rgb(32, 32, 32)
   );
+  text-align: center;
 }
 
 .navigation a {
-  float: left;
   font-size: 16px;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  
+  /*float: left;*/
 }
 
 .dropdown {
-  float: left;
+  /* float: left;*/
   overflow: hidden;
 }
 
@@ -299,7 +298,6 @@ display: -webkit-box;
   color: black;
 }
 
-
 /* width */
 ::-webkit-scrollbar {
   width: 20px;
@@ -329,7 +327,6 @@ display: -webkit-box;
   line-height: 200%;
 }
 
-
 #head-content {
   display: inline-flex;
 }
@@ -338,9 +335,8 @@ display: -webkit-box;
   align-self: center;
 }
 
-.text{
+.text {
   margin-left: 20%;
   margin-right: 20%;
-  font-size:large;
+  font-size: large;
 }
-
