@@ -12,9 +12,12 @@ html {
   overflow: overlay;
 }
 body {
-  width: 100%;
+  /* width: 100%;*/
   height: 100%;
-  margin: 0 0 0 0;
+  margin: 0 15% 0 15%;
+  background-image: url(assets/body_bg2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 .head {
   color: white;
@@ -24,8 +27,12 @@ body {
   text-align: center;
   margin: auto;
 
-  background-color: black;
-  background-size: 100px;
+  background-image: linear-gradient(
+    90deg,
+    rgb(215, 200, 167),
+    rgb(169, 165, 144)
+  );
+
   width: 100%;
   height: fit-content;
 }
@@ -82,9 +89,9 @@ body {
   width: 100%;
   height: 100%;
   background-image: radial-gradient(
-    rgb(0, 247, 255),
-    rgb(0, 183, 255),
-    rgb(45, 0, 128)
+    rgb(250, 255, 208, 0.5),
+    rgb(177, 192, 159, 0.5),
+    rgb(255, 251, 208, 0.5)
   );
   overflow: hidden;
   margin-bottom: -3px;
@@ -181,12 +188,10 @@ body {
   overflow: hidden;
   background-color: #333;
   /*background-color: #333;*/
-  background-image: radial-gradient(
-    rgb(158, 158, 158),
-    rgb(68, 68, 68),
-    rgb(32, 32, 32)
-  );
+  background-image: radial-gradient(#d4c7a6, #a8a38d);
   text-align: center;
+  box-shadow: inset 0px 0px 10px 0px;
+  border-radius: 2px;
 }
 
 .navigation a {
@@ -216,7 +221,7 @@ body {
 
 .navigation a:hover,
 .dropdown:hover .dropbtn {
-  background-color: grey;
+  background-color: rgba(169, 165, 144, 0.5);
 }
 
 .dropdown-content {
@@ -248,13 +253,20 @@ body {
 .news {
   margin-left: 20%;
   margin-right: 20%;
+  text-align: left;
 }
 .news dd {
-  height: 40px;
+  /* height: 40px;
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 760px;
-  white-space: nowrap;
+  white-space: nowrap;*/
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  margin-inline-start: 0px;
 }
 .links:hover {
   color: red;
@@ -268,7 +280,7 @@ body {
   color: lightgreen;
 }
 .links {
-  font-size: 30px;
+  font-size: 20px;
   color: black;
 }
 
@@ -300,7 +312,7 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 15px;
 }
 
 /* Track */
@@ -312,9 +324,9 @@ body {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background-image: radial-gradient(
-    rgb(0, 247, 255),
-    rgb(0, 183, 255),
-    rgb(81, 0, 128)
+    rgb(250, 255, 208, 0.5),
+    rgb(177, 192, 159, 0.5),
+    rgb(255, 251, 208, 0.5)
   );
   border-radius: 10px;
 }
