@@ -1,0 +1,357 @@
+a {
+  font-style: normal;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  font-style: normal;
+}
+html {
+  width: 100%;
+  height: 100%;
+  overflow: overlay;
+}
+body {
+  height: 100%;
+  margin: 0 15% 0 15%;
+  background-image: url(assets/body_bg2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  cursor: url("assets/cursor.ico"), default;
+}
+.head {
+  color: white;
+  padding-top: 1%;
+
+  font-size: 40px;
+  text-align: center;
+
+  background-image: linear-gradient(
+    90deg,
+    rgb(215, 200, 167),
+    rgb(169, 165, 144)
+  );
+}
+.head h1 {
+  margin: 0 0 0 0;
+}
+
+.petition {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 70%;
+  height: 100%;
+  display: inline-block;
+  padding: 2%;
+  padding-left: 5%;
+  box-sizing: border-box;
+  overflow: auto;
+  vertical-align: top;
+  margin-left: -4px;
+  color: white;
+  font-weight: bolder;
+}
+.petition h2 {
+  text-align: center;
+}
+
+.comments-container {
+  background-color: rgba(167, 167, 167, 0.2);
+  height: 100%;
+  overflow: auto;
+  width: 30%;
+  display: inline-block;
+  padding: 2%;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+.comment {
+  /*height: 100px;
+  text-align: left;
+  overflow: ellipsis;*/
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+.content {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    rgb(250, 255, 208, 0.5),
+    rgb(177, 192, 159, 0.5),
+    rgb(255, 251, 208, 0.5)
+  );
+  overflow: hidden;
+  margin-bottom: -3px;
+}
+.content p {
+  font-weight: bold;
+  text-align: left;
+  padding: 2%;
+}
+
+.btn {
+  background-color: #000000af;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100%;
+}
+.btn:hover {
+  background-color: #4b4b4bd2;
+}
+.btn:active {
+  background-color: #c0c0c0;
+  color: black;
+  border: none;
+  border-style: none;
+}
+.btn:focus {
+  outline: none;
+}
+.form {
+  display: block;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 0.2%;
+  margin: auto;
+  text-align: left;
+  font-size: 20px;
+  width: 60%;
+  background-color: white;
+  background: rgba(255, 255, 255, 0.7);
+}
+#login {
+  width: 25%;
+  height: 70%;
+}
+#login input {
+  border: none;
+  border-bottom: 2px solid black;
+  background: rgba(255, 255, 255, 0);
+}
+#login table {
+  margin-top: 10%;
+  padding: 1%;
+}
+#login table td {
+  padding: 10% 1% 10% 1%;
+  margin-bottom: 10%;
+  font-weight: bolder;
+}
+.form input {
+  width: 100%;
+  align-self: center;
+  font-size: 20px;
+  background-color: white;
+}
+.form table {
+  width: 100%;
+}
+.form table td {
+  padding: 0.5%;
+}
+
+.form textarea {
+  width: 100%;
+}
+.form-container {
+  padding-top: 0.1%;
+}
+/* Prepisano sa W3school*/
+#nav-container {
+  text-align: center;
+  display: inline-flex;
+}
+.navigation {
+  overflow: hidden;
+  background-color: #333;
+  background-image: radial-gradient(#d4c7a6, #a8a38d);
+  text-align: center;
+  box-shadow: inset 0px 0px 10px 0px;
+  border-radius: 2px;
+}
+
+.navigation a {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navigation a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgba(169, 165, 144, 0.5);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*do ovde je prepisano sa w3school*/
+.news {
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: left;
+}
+.news dd {
+  /*preuzet nacin prelamanja teksta tako da se prikazu 3 tackice...*/
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  margin-inline-start: 0px;
+}
+.links:hover {
+  color: red;
+}
+.links:link {
+  color: black;
+  text-decoration: none;
+}
+
+.links:active {
+  color: lightgreen;
+}
+.links {
+  font-size: 20px;
+  color: black;
+}
+
+#news-h1 {
+  font-size: 50px;
+}
+
+#table {
+  margin-top: 8%;
+  border-collapse: collapse;
+  width: 60%;
+  margin: auto;
+}
+
+#table td,
+#table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  height: 25px;
+}
+#table td input {
+  height: 15px;
+  width: 15px;
+}
+#table td input:hover {
+  height: 20px;
+  width: 20px;
+}
+#table td input:focus {
+  animation: spin 5s;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-image: radial-gradient(#d4c7a6, #a8a38d);
+  color: black;
+}
+
+/* preuzeti stilovi za skrolbarove*/
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: radial-gradient(
+    rgb(250, 255, 208, 0.5),
+    rgb(177, 192, 159, 0.5),
+    rgb(255, 251, 208, 0.5)
+  );
+  border-radius: 10px;
+}
+/*do ovde su preuzeti stilovi za skrolbarove*/
+.list {
+  list-style-position: inside;
+  font-size: x-large;
+  margin-top: 5%;
+  text-align: center;
+  line-height: 200%;
+}
+
+#head-content {
+  display: inline-flex;
+}
+#naslov {
+  align-self: center;
+}
+
+.text {
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: large;
+}
+
+.table_cs {
+  font-size: small;
+}
