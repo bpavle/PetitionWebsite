@@ -14,8 +14,15 @@ $tel = $_POST["tel"];
 echo $tel.'<br>';
 $broj_lk = $_POST["broj_lk"];
 echo $broj_lk.'<br>';
+
+$lokacija=$_POST["lokacije"]
+
 $termini=$_POST["termini"];
 
+
+
+
+$preuzet=$_POST["preuzet"]
 $javno=$_POST["javno"];
 $obavestenja=$_POST['obavestenja'];
 }
@@ -23,12 +30,12 @@ $obavestenja=$_POST['obavestenja'];
 
 
 $sql = "INSERT INTO sign SET
-Name='$ime',
-Surname='$prezime',
-Phone_Number='$tel',
-Email='$email',
-personal_id_number='$broj_lk',
-Location_id='1',
+name='$ime',
+surname='$prezime',
+phone_number='$tel',
+email='$email',
+id_number='$broj_lk',
+location_id='$lokacija',
 Number_Of_Appointments='1',
 Appointments='$termini',
 Email_Info='$obavestenja[0]',
