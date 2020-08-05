@@ -19,12 +19,10 @@ $lokacija=$_POST["lokacije"]
 
 $termini=$_POST["termini"];
 
-$komentar=$POST["message"]
+$komentar=$POST["message"];
 
 
-
-
-$preuzet=$_POST["preuzet"]
+$preuzet=$_POST["preuzet"];
 $javno=$_POST["javno"];
 $obavestenja=$_POST['obavestenja'];
 }

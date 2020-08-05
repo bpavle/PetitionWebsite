@@ -60,31 +60,40 @@
     <h1>Унос локације</h1>
     <div class="form">
     <table>
-        <form>
-          <tr>
-            <td> Назив:</td>
-            <td> <input type="text" name="naziv"></td>
+        <form  method="POST" action="insert_location.php">
+            <tr>
+                    <td> Назив:</td>
+                   <td> <input type="text" name="naziv"></td>
             
-        </tr>
+            </tr>
+
+            <tr>
+              <td> Град:</td>
+              <td> <input type="text" name="grad"></td>
+            </tr>
+
+            <tr>
+             <td> Општина:</td>
+             <td> <input type="text" name="opstina"></td>
+            </tr>
+
             <tr>
                 <td> Улица:</td>
                 <td> <input type="text" name="ulica"></td>
                 
             </tr>
            
-            <tr>
-                <td> Општина:</td>
-                <td> <input type="text" name="opstina"></td>
-            </tr>
+           
             <tr>
                 <td> Координате локације:</td>
                 <td> <input type="text" name="koordinate"></td>
+               
             </tr>
            
             
            
             <tr >
-              <td colspan="2"> <button class = "btn"> Унеси </a></button></td>
+              <td colspan="2"> <button class = "btn" name="posalji"> Унеси </a></button></td>
               
             </tr>
         </form>
