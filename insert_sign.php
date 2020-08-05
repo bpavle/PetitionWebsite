@@ -19,6 +19,8 @@ $lokacija=$_POST["lokacije"]
 
 $termini=$_POST["termini"];
 
+$komentar=$POST["message"]
+
 
 
 
@@ -35,11 +37,14 @@ surname='$prezime',
 phone_number='$tel',
 email='$email',
 id_number='$broj_lk',
+comment='$komentar',
 location_id='$lokacija',
-Number_Of_Appointments='1',
-Appointments='$termini',
-Email_Info='$obavestenja[0]',
-Public_Signature='$javno[0]';
+appointment_count='1',
+appointments='$termini',
+email_notification='$obavestenja[0]',
+publish='$javno[0]';
+taken_over='$preuzet[0]';
+
 ";
 
 
