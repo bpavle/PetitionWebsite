@@ -11,14 +11,13 @@ $prezime= $_POST["prezime"];
 
 $email= $_POST["email"];
 
-
-
 $predlagac= $_POST["predlagac"];
 
 $telefon= $_POST["telefon"];
 
 $broj_lk= $_POST["broj_lk"];
 
+$sifra=$_POST["sifra"];
 
 }
 
@@ -35,6 +34,8 @@ email='$email',
 phone_number='$telefon',
 
 id_number='$broj_lk',
+
+password='$sifra',
 
 recommended_by_organizer='$predlagac'
 

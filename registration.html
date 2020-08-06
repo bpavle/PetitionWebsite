@@ -41,7 +41,7 @@
         <h1>Регистрација</h1>
         <div class="form">
         <table>
-            <form>
+            <form method="POST" action="registration.php">
                 <tr>
                     <td> Име:</td>
                     <td> <input type="text" name="ime"></td>
@@ -53,13 +53,14 @@
                     <td> <input type="text" name="prezime"></td>
                 </tr>
                 <tr>
-                    <td> е-mail:</td>
-                    <td> <input type="text" name="mail"></td>
-                </tr>
+                  <td> Број личне карте:</td>
+                  <td> <input type="text" name="broj_lk"></td>
+              </tr>
                 <tr>
-                    <td> Адреса:</td>
-                    <td> <input type="text" name="adresa"></td>
+                    <td> е-mail:</td>
+                    <td> <input type="text" name="email"></td>
                 </tr>
+               
                 <tr>
                     <td> Предлагач:</td>
                     <td> <input type="text" name="predlagac"></td>
@@ -74,7 +75,7 @@
                 </tr>
                
                 <tr >
-                  <td colspan="2"> <button class = "btn"> <a href="index.html">Региструј се </a></button></td>
+                  <td colspan="2"> <button class = "btn" name="posalji"> <a href="index.html">Региструј се </a></button></td>
                   
                 </tr>
             </form>
