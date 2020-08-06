@@ -6,30 +6,35 @@ if (isset($_POST["posalji"])){
 
 $ime = $_POST["ime"];
 echo $ime.'<br>';
+
 $prezime = $_POST["prezime"];
 echo $prezime.'<br>';
+
 $email=$_POST["email"];
 echo $email.'<br>';
+
 $tel = $_POST["tel"];
 echo $tel.'<br>';
+
 $broj_lk = $_POST["broj_lk"];
 echo $broj_lk.'<br>';
 
-$lokacija=$_POST["lokacije"]
+$lokacija=$_POST["lokacije"];
 
 $termini=$_POST["termini"];
 
-$komentar=$POST["message"];
-
+$komentar=$_POST["message"];
+$broj_termina=$_POST["broj_termina"];
 
 $preuzet=$_POST["preuzet"];
 $javno=$_POST["javno"];
-$obavestenja=$_POST['obavestenja'];
+$obavestenja=$_POST["obavestenja"];
 }
 
 
 
 $sql = "INSERT INTO sign SET
+
 name='$ime',
 surname='$prezime',
 phone_number='$tel',
@@ -37,11 +42,11 @@ email='$email',
 id_number='$broj_lk',
 comment='$komentar',
 location_id='$lokacija',
-appointment_count='1',
+appointment_count='$broj_termina',
 appointments='$termini',
 email_notification='$obavestenja[0]',
-publish='$javno[0]';
-taken_over='$preuzet[0]';
+publish='$javno[0]',
+taken_over='$preuzet[0]'
 
 ";
 

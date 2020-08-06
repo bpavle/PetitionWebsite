@@ -66,7 +66,7 @@
       <h1><b>Унос нове вести</b></h1>
       <div class="form">
         <table>
-          <form>
+          <form method="POST" action="insert_news.php">
             <tr>
               <td> Наслов:</td>
               <td> <input type="text" name="naslov"></td>
@@ -84,7 +84,7 @@
               <!--<td>Коментар:</td><td><input type="text-area" name="komentar"></td>-->
             </tr>
             <tr>
-              <td colspan="2"> <button class="btn">Унеси</button></td>
+              <td colspan="2"> <button class="btn" name="posalji">Унеси</button></td>
             </tr>
           </form>
         </table>
