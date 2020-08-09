@@ -17,6 +17,7 @@ while($podaci=mysqli_fetch_assoc($rez)){
   
     
     echo<<<EOT
+    
     <tr>
     <td>$ime</td>
     <td>$prezime</td>
@@ -25,9 +26,11 @@ while($podaci=mysqli_fetch_assoc($rez)){
     <td>$telefon</td>
     
     
-    <td><INPUT type="image" src="assets/update.png" value=""> </td>
-    <td><INPUT type="image" src="assets/delete.png" value=""> </td>
+    <td><INPUT type="image" src="assets/update.png" value="" > </td>
+    
+    <td><INPUT type="image" src="assets/delete.png" value="" > </td>
   </tr>
+ 
   EOT; 
 }
 
