@@ -55,13 +55,15 @@
       <h1>Тренутне локације на којима можете потписати петицију</h1>
       <table id="table">
         <tr>
-          <th>Назив</th>
-          <th>Улица</th>
+          <th>Град</th>
           <th>Општина</th>
+          <th>Улица</th>
           <th>Координате</th>
           <th>Ажурирај</th>
           <th>Избриши</th>
         </tr>
+        <?php include("get_locations.php")?>
+        <!--
         <tr>
           <td>Жарково</td>
           <td>Водоводска</td>
@@ -102,6 +104,7 @@
           <td><INPUT type="image" src="assets/update.png" value=""> </td>
             <td><INPUT type="image" src="assets/delete.png" value=""> </td>
         </tr>
+        -->
       </table>
     </div>
   </body>
