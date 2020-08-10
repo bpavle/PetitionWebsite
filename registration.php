@@ -4,47 +4,62 @@ require_once "config.php";
  
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = "";
-$username_err = $password_err = $confirm_password_err = "";
+$mail_err = $password_err = $confirm_password_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
-    // Validate username
+    // Validacija email adrese-
+    //Proveravamo da li je polje mozda ostalo prazno
     if(empty(trim($_POST["mail"]))){
-        $username_err = "Молимо Вас да унесете адресу е поште";
+        $mail_err = "Молимо Вас да унесете адресу е поште";
+        echo $mail_err;
     } else{
-        // Prepare a select statement
+      
+//ako polje nije prazno proveravamo da li se adresa vec nalazi u bazi
         $mail = $_POST["mail"];
         $sql = "SELECT email FROM organizer_administrator WHERE email = '$mail' ";
         
         $result= mysqli_query($link,$sql);
-      
-        $temp = mysqli_fetch_array($result);
-       if($temp[0]==$mail){
-         echo "Већ постоји дата мејл адреса";
+
+        $temp = mysqli_fetch_array($result);//mysqli_fetch_array smesta rezultat upita u numericki ili asocijativni niz kada god
+        //kada god se pozove predje se u sledeci red, ali ja ovde ocekujem jedan ili ne jedan niz podataka.
+       if($temp["email"]==$mail){
+           $mail_err="Мејл адреса већ постоји";
+         //Ovde bi mogao da uleti javascript sa nekim alertom npr. Mozda i da boji html polje u kojem je mejl adresa(to moze i bez javascript-a)
          
-       }
+       }else{
        
        
         
     
     // Validate password
     if(empty(trim($_POST["sifra"]))){
-        $password_err = "Поље за шифру не сме бити празно";     
+        $password_err = "Поље за шифру не сме бити празно";   
+        echo $password_err;  
     } else{
         $password = trim($_POST["sifra"]);
     }
-    
-  }
-    
-    // Check input errors before inserting in database
-    if(empty($username_err) && empty($password_err)){
+    $name=$_POST["ime"];
+    $surname=$_POST["prezime"];
+    $phone_number=$_POST["telefon"];
+    $address=$_POST["adresa"];
+    $recommended_by=$_POST["predlagac"];
+        // Check input errors before inserting in database
+        if(empty($mail_err) && empty($password_err)){
         
-        // Prepare an insert statement
-        $sql = "INSERT INTO organizer_administrator (email, password) VALUES (".$mail.",".$password.")";
-         
-        mysqli_query($link,$sql)
-    }
+            /* nije dodata adresa jer je nema u postavci novog dela zadatka:(  */
+            $sql = "INSERT INTO organizer_administrator (email, password,name,surname,recommended_by_organizer_id,phone_number) VALUES ('".$mail."','".$password."','".$name."','".$surname."',".$recommended_by.",'".$phone_number."')";
+             
+            $result=mysqli_query($link,$sql);
+            echo "upit ".$sql." izvrsen";
+    
+        }
+  }
+ 
+
+   
+} 
+
     
     // Close connection
     mysqli_close($link);
@@ -98,36 +113,37 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <form method="POST" action="registration.php">
                 <tr>
                     <td> Име:</td>
-                    <td> <input type="text" name="ime"></td>
+                    <td> <input type="text" name="ime" required></td>
                     
                 </tr>
                
                 <tr>
                     <td> Презиме:</td>
-                    <td> <input type="text" name="prezime"></td>
+                    <td> <input type="text" name="prezime" required></td>
                 </tr>
                 <tr>
                     <td> е-mail:</td>
-                    <td> <input type="text" name="mail"></td>
+                    <td> <input type="text" name="mail" required></td>
                 </tr>
                 <tr>
                     <td> Адреса:</td>
-                    <td> <input type="text" name="adresa"></td>
+                    <td> <input type="text" name="adresa" required></td>
                 </tr>
                 <tr>
                     <td> Предлагач:</td>
-                    <td> <input type="text" name="predlagac"></td>
+                    <td> <input type="text" name="predlagac" required></td>
                 </tr>
                 <tr>
                     <td> Телефон:</td>
-                    <td> <input type="number" name="telefon"></td>
+                    <td> <input type="number" name="telefon" required></td>
                 </tr>
                 <tr>
                     <td> Шифра:</td>
-                    <td> <input type="password" name="sifra"></td>
+                    <td> <input type="password" name="sifra" required></td>
                 </tr>
                
                 <tr >
+                 
                   <td colspan="2"> <button class = "btn" name="register"> <a href="index.html">Региструј се </a></button></td>
                   
                 </tr>
