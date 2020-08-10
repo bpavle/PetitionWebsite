@@ -43,7 +43,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Prepare an insert statement
         $sql = "INSERT INTO organizer_administrator (email, password) VALUES (".$mail.",".$password.")";
          
-        mysqli_query($link,$sql);
+        mysqli_query($link,$sql)
     }
     
     // Close connection

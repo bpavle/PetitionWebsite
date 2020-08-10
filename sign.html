@@ -9,9 +9,7 @@
 </head>
 
 <body>
-    <?php
-     include("fixed.php")
-?>
+    <?php include("fixed.php")?>
     <!-- 
     <div class="head">
       <div id="head-content">
@@ -77,16 +75,17 @@
                 <tr>
                     <td> Локација:</td>
                     <td> <select name="lokacije" id="lokacije">
-                        <option value="1">Суботица, Војвођанска 21</option>
-                        <option value="2">Београд, Косовска 10</option>
-                        <option value="3">Ваљево, Шумадијска 1</option>
-                        <option value="4">Ниш, Јужна 2</option>
-                        <option value="5">Приштина, Милоша Обилића 3</option>
+                        <?php include("get_locations_sign.php")?>
                       </select>
                     </td>
                 </tr>
+                
                 <tr>
-                    <td> Термини:</td>
+                    <td> Број термина који вам одговарају:</td>
+                    <td> <input type="text" name="broj_termina"></td>
+                </tr>
+                <tr>
+                    <td> Унесите термине који вам одговарају:</td>
                     <td> <input type="text" name="termini"></td>
                 </tr>
                 <tr>
@@ -117,7 +116,7 @@
                 </tr>
             </form>
         </table>
-    </div>
+       </div>
     </div>
 </div>
 
