@@ -46,7 +46,8 @@ appointment_count='$broj_termina',
 appointments='$termini',
 email_notification='$obavestenja[0]',
 publish='$javno[0]',
-taken_over='$preuzet[0]'
+taken_over='$preuzet[0]',
+number=1
 
 ";
 

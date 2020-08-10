@@ -1,11 +1,12 @@
-<?php
+
+ <?php
 
 $link=mysqli_connect("localhost:3308", "root","","petition");
 
 if (isset($_POST["posalji"])){
 
-
-$ime= $_POST["naziv"];
+$id=$_POST["id"];
+$naziv= $_POST["naziv"];
 
 $grad= $_POST["grad"];
 
@@ -22,7 +23,7 @@ $y= $_POST["y_koordinata"];
 
 
 
-$sql = "INSERT INTO location SET
+$sql = "UPDATE location SET
 
 name='$naziv',
 
@@ -36,6 +37,7 @@ x_coordinate='$x',
 
 y_coordinate='$y'
 
+WHERE location_id=$id;
 
 ";
 
@@ -44,11 +46,13 @@ mysqli_query($link,$sql);
 
 mysqli_close($link);
 
-//vracanje na sign.html
- $newURL = "sign.html";
-header('Location: '.$newURL);
-die(); 
-
+ 
 
 
 ?>
+ 
+ 
+
+
+
+

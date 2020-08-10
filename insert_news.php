@@ -20,7 +20,7 @@ $sql = "INSERT INTO news SET
 title='$naslov',
 date='$datum',
 content='$vest',
-# organizer_administrator_id=1 -mora da postoji id organizatora da bi radilo  
+organizer_administrator_id=1                           # -mora da postoji id organizatora da bi radilo  
 
 ";
 
