@@ -1,3 +1,57 @@
+<?php
+// Include config file
+require_once "config.php";
+ 
+// Define variables and initialize with empty values
+$username = $password = $confirm_password = "";
+$username_err = $password_err = $confirm_password_err = "";
+ 
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+ 
+    // Validate username
+    if(empty(trim($_POST["mail"]))){
+        $username_err = "Молимо Вас да унесете адресу е поште";
+    } else{
+        // Prepare a select statement
+        $mail = $_POST["mail"];
+        $sql = "SELECT email FROM organizer_administrator WHERE email = '$mail' ";
+        
+        $result= mysqli_query($link,$sql);
+      
+        $temp = mysqli_fetch_array($result);
+       if($temp[0]==$mail){
+         echo "Већ постоји дата мејл адреса";
+         
+       }
+       
+       
+        
+    
+    // Validate password
+    if(empty(trim($_POST["sifra"]))){
+        $password_err = "Поље за шифру не сме бити празно";     
+    } else{
+        $password = trim($_POST["sifra"]);
+    }
+    
+  }
+    
+    // Check input errors before inserting in database
+    if(empty($username_err) && empty($password_err)){
+        
+        // Prepare an insert statement
+        $sql = "INSERT INTO organizer_administrator (email, password) VALUES (".$mail.",".$password.")";
+         
+        mysqli_query($link,$sql);
+    }
+    
+    // Close connection
+    mysqli_close($link);
+}
+
+?>
+ 
 <!DOCTYPE html>
 
 <head>
@@ -41,7 +95,7 @@
         <h1>Регистрација</h1>
         <div class="form">
         <table>
-            <form>
+            <form method="POST" action="registration.php">
                 <tr>
                     <td> Име:</td>
                     <td> <input type="text" name="ime"></td>
@@ -74,7 +128,7 @@
                 </tr>
                
                 <tr >
-                  <td colspan="2"> <button class = "btn"> <a href="index.html">Региструј се </a></button></td>
+                  <td colspan="2"> <button class = "btn" name="register"> <a href="index.html">Региструј се </a></button></td>
                   
                 </tr>
             </form>
