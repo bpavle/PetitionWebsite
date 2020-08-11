@@ -7,7 +7,7 @@ if (isset($_POST["update"])){
 
 $i=1;
 while($_POST["id$i"]){
-    echo "kliknuto";
+    
     $id=$_POST["id$i"];
 
     $naziv= $_POST["naziv$i"];
