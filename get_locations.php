@@ -9,6 +9,7 @@ $rez=mysqli_query($link,$upit);
 
 while($podaci=mysqli_fetch_assoc($rez)){
   
+  $id=$podaci['location_id'];
    $naziv=$podaci['name'];
    $grad=$podaci['city'];
    $opstina=$podaci['municipality'];

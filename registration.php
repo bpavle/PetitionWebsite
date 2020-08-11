@@ -38,6 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         echo $password_err;  
     } else{
         $password = trim($_POST["sifra"]);
+        
     }
     $name=$_POST["ime"];
     $surname=$_POST["prezime"];
