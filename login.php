@@ -38,13 +38,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         if($temp["email"]==$_POST["email"]){
 
           if($temp["password"]==$_POST["password"]){
-            
+            session_id("idadminsesije");  
             session_start();
             $_SESSION["loggedin"]=true;
             $_SESSION["email"] = $email;
-            
+            header("Location: index.html");
             echo"Uspesno logovanje email:".$_SESSION["email"];
-
+            
           }else{
             //ovde ce stajati kod za pogresan password
             echo "Pogresan pass";
@@ -52,6 +52,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         }else{
           //ovde stoji kod koji se izvrsi ako ne postoji user sa datim mejlom... npr. prebacivanje na registration.php
+          echo "Ne postoji user sa datim mejlom";
+          
         }
         
         

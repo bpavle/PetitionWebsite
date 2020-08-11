@@ -1,6 +1,6 @@
 
 <?php
-
+session_start();
 if(!isset($_SESSION["email"])){
   
 echo <<<EOT
@@ -58,7 +58,7 @@ else{
   
   <a href="complete_signatures.html">Комплетни потписи</a>
  
-  <a href="index.html">Излогујте се</a>
+  <a href="logout.php">Излогујте се</a>
     </div>
   </div>
 
