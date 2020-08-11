@@ -1,7 +1,7 @@
 
 <?php
 session_start();
-echo basename($_SERVER["PHP_SELF"]);
+
 if(basename($_SERVER["PHP_SELF"])=="locations.html"||
   basename($_SERVER["PHP_SELF"])=="organizer.html"||
   basename($_SERVER["PHP_SELF"])=="complete_signatures.html"||

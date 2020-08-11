@@ -45,23 +45,23 @@
             <form method="POST" action="insert_sign.php">
                 <tr>
                     <td> Име:</td>
-                    <td> <input type="text" name="ime"></td>
+                    <td colspan="4"> <input type="text" name="ime"></td>
                 </tr>
                 <tr>
                     <td> Презиме:</td>
-                    <td> <input type="text" name="prezime"></td>
+                    <td colspan="4"> <input type="text" name="prezime"></td>
                 </tr>
                 <tr>
                     <td> e-mail:</td>
-                    <td> <input type="text" name="email"></td>
+                    <td colspan="4"> <input type="text" name="email"></td>
                 </tr>
                 <tr>
                     <td> Број телефона:</td>
-                    <td> <input type="text" name="tel"></td>
+                    <td colspan="4"> <input type="text" name="tel"></td>
                 </tr>
                 <tr>
                     <td> Број личне карте:</td>
-                    <td> <input type="text" name="broj_lk"></td>
+                    <td colspan="4"> <input type="text" name="broj_lk"></td>
                 </tr>
                 <!-- <tr>
                     <td> Датум:</td>
@@ -74,45 +74,68 @@
                 
                 <tr>
                     <td> Локација:</td>
-                    <td> <select name="lokacije" >
+                    <td colspan="4"> <select name="lokacije" >
                         <?php include("get_locations_sign.php")?>
                       </select>
                     </td>
                 </tr>
                 
-                <tr>
+             <!--    <tr>
                     <td> Број термина који вам одговарају:</td>
                     <td> <input type="text" name="broj_termina"></td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td> Унесите термине који вам одговарају:</td>
-                    <td> <input type="text" name="termini"></td>
+                    <!-- <td> <input type="text" name="termini"></td> -->
+                    <td >
+                    <input type="checkbox" name="termin1" value="7:00-9:00">
+                    <label for="termin1">7:00-9:00</label>
+                
+                    <input type="checkbox" name="termin2" value="9:00-11:00">
+                    <label for="termin2">9:00-11:00</label>
+                    </td>
+                    <td>
+                    <input type="checkbox" name="termin3" value="11:00-13:00">
+                    <label for="termin3">11:00-13:00</label>
+                    <input type="checkbox" name="termin4" value="13:00-15:00">
+                    <label for="termin4">13:00-15:00</label>
+                    </td>
+                    <td>
+                    <input type="checkbox" name="termin5" value="15:00-17:00">
+                    <label for="termin5">15:00-17:00</label>
+                    <input type="checkbox" name="termin6" value="17:00-19:00">
+                    <label for="termin6">17:00-19:00</label>
+                    </td>
+                    <td>
+                    <input type="checkbox" name="termin7" value="19:00-21:00">
+                    <label for="termin7">19:00-21:00</label>
+                    </td>
                 </tr>
                 <tr>
                     <td> Објавити потпис?</td>
-                    <td ><input type="radio" name="javno" style="width: unset;" value='1'>ДА
+                    <td colspan="4"><input type="radio" name="javno" style="width: unset;" value='1'>ДА
                         <input type="radio" name="javno" style="width:unset" value='0'>НЕ
                     </td>
                 </tr>
                 <tr>
                     <td> Обавештења мејлом?</td>
-                    <td ><input type="radio" name="obavestenja" style="width: unset;" value='1'>ДА
+                    <td colspan="4"><input type="radio" name="obavestenja" style="width: unset;" value='1'>ДА
                         <input type="radio" name="obavestenja" style="width:unset" value='0'>НЕ
                     </td>
                 </tr>
                 <tr>
                     <td> Потпис преузет?</td>
-                    <td ><input type="radio" name="preuzet" style="width: unset;" value='1'>ДА
+                    <td colspan="4"><input type="radio" name="preuzet" style="width: unset;" value='1'>ДА
                         <input type="radio" name="preuzet" style="width:unset" value='0'>НЕ
                     </td>
                 </tr>
                 <tr>
                     <td>Коментар:</td>
-                    <td><textarea id="message" class="input" cols="60" name="message" rows="10"></textarea></td>
+                    <td colspan="4"><textarea id="message" class="input" cols="60" name="message" rows="10"></textarea></td>
                     <!--<td>Коментар:</td><td><input type="text-area" name="komentar"></td>-->
                 </tr>
                 <tr >
-                  <td colspan="2"> <button class = "btn" type="submit" name="posalji">Пошаљи</button></td>
+                  <td colspan="5"> <button class = "btn" type="submit" name="posalji">Пошаљи</button></td>
                 </tr>
             </form>
         </table>

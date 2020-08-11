@@ -1,6 +1,6 @@
 <?php
 
-$link=mysqli_connect("localhost:3308", "root","","petition");
+require_once("config.php");
 
 if (isset($_POST["posalji"])){
 
@@ -20,11 +20,31 @@ $broj_lk = $_POST["broj_lk"];
 echo $broj_lk.'<br>';
 
 $lokacija=$_POST["lokacije"];
-
-$termini=$_POST["termini"];
+$termini="";
+if(isset($_POST["termin1"])){
+    $termini = $termini.$_POST["termin1"].";";
+}
+if(isset($_POST["termin2"])){
+    $termini = $termini.$_POST["termin2"].";";
+}
+if(isset($_POST["termin3"])){
+    $termini = $termini.$_POST["termin3"].";";
+}
+if(isset($_POST["termin4"])){
+    $termini = $termini.$_POST["termin4"].";";
+}
+if(isset($_POST["termin5"])){
+    $termini = $termini.$_POST["termin5"].";";
+}
+if(isset($_POST["termin6"])){
+    $termini = $termini.$_POST["termin6"].";";
+}
+if(isset($_POST["termin7"])){
+    $termini = $termini.$_POST["termin7"].";";
+}
 
 $komentar=$_POST["message"];
-$broj_termina=$_POST["broj_termina"];
+
 
 $preuzet=$_POST["preuzet"];
 $javno=$_POST["javno"];
@@ -42,7 +62,6 @@ email='$email',
 id_number='$broj_lk',
 comment='$komentar',
 location_id='$lokacija',
-appointment_count='$broj_termina',
 appointments='$termini',
 email_notification='$obavestenja[0]',
 publish='$javno[0]',
@@ -50,17 +69,17 @@ taken_over='$preuzet[0]',
 number=1
 
 ";
-
+echo $sql;
 
 mysqli_query($link,$sql);
 
 mysqli_close($link);
 
 //vracanje na sign.html
- $newURL = "sign.html";
+/*  $newURL = "sign.html";
 header('Location: '.$newURL);
 die(); 
-
+ */
 
 
 ?>
