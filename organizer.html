@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <div class="head">
+    <!--    <div class="head">
       <div id="head-content">
       <a href="index.html">
         
@@ -16,7 +16,7 @@
       /></a></div>
       <div id="naslov">Добродошли на Потпиши.ме!</div></div>
     </div>
-    <div class="navigation">
+     <div class="navigation">
       <div id = "nav-container">
       <a href="index.html">Насловна</a>
       <a href="petition.html">Петиција</a>
@@ -46,11 +46,13 @@
         </div>
       </div>
   
+   
       <a href="contact.html">Контакт</a>
-      
+       
     </div>
   </div>
-
+-->
+    <?php include("fixed.php") ?>
     <div class="content">
       <h1>Подаци о организаторима</h1>
       <table id="table">
@@ -58,7 +60,7 @@
           <th>Име</th>
           <th>Презиме</th>
           <th>e-mail</th>
-          
+
           <th>Предлагач</th>
           <th>Телефон</th>
           <th>Ажурирај</th>
@@ -66,7 +68,7 @@
         </tr>
         <tr>
           <?php include("get_organizers.php")?>
-       <!--   <td>Пера</td>
+          <!--   <td>Пера</td>
           <td>Перић</td>
           <td><a href="mailto:peraperic@gmail.com">peraperic@gmail.com</a></td>
           <td>Немањина 24</td>
@@ -122,6 +124,7 @@
             <td><INPUT type="image" src="assets/delete.png" value=""> </td>
         </tr>
       -->
+        </tr>
       </table>
     </div>
   </body>

@@ -1,6 +1,17 @@
 
 <?php
 session_start();
+echo basename($_SERVER["PHP_SELF"]);
+if(basename($_SERVER["PHP_SELF"])=="locations.html"||
+  basename($_SERVER["PHP_SELF"])=="organizer.html"||
+  basename($_SERVER["PHP_SELF"])=="complete_signatures.html"||
+  basename($_SERVER["PHP_SELF"])=="news_entry.html" ||
+  basename($_SERVER["PHP_SELF"])=="organizer_entry.html"||
+  basename($_SERVER["PHP_SELF"])=="location_entry.html")
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+  header("location: login.php");
+  exit;
+}
 if(!isset($_SESSION["email"])){
   
 echo <<<EOT
