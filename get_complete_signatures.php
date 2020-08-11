@@ -48,11 +48,13 @@ else $email_obavestenje='НЕ';
     <td>$email_obavestenje</td>
     <td>$preuzet</td>
     <td>$komentar</td>
-    <td><INPUT type="image" src="assets/update.png" value=""> </td>
-    <td><INPUT type="image" src="assets/delete.png" value=""> </td>
+   
   </tr>
   EOT; 
 }
+echo<<<EOT
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><td colspan="2"> <button class = "btn" type="submit" name="posalji"><a href="update_complete_signature.html">Измени </a></button></td></td></tr>
+  EOT;
 
 mysqli_close($link);
 ?>

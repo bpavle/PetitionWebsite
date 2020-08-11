@@ -26,13 +26,13 @@ while($podaci=mysqli_fetch_assoc($rez)){
     <td>$telefon</td>
     
     
-    <td><INPUT type="image" src="assets/update.png" value="" > </td>
-    
-    <td><INPUT type="image" src="assets/delete.png" value="" > </td>
+  
   </tr>
  
   EOT; 
 }
-
+echo<<<EOT
+  <tr><td></td><td></td><td></td><td><td colspan="2"> <button class = "btn" type="submit" name="posalji"><a href="update_organizer.html">Измени </a></button></td></td></tr>
+  EOT;
 mysqli_close($link);
 ?>
