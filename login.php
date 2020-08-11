@@ -1,3 +1,68 @@
+<?php
+// Initialize the session
+
+ 
+// Include config file
+require_once "config.php";
+ 
+// Define variables and initialize with empty values
+$email = $password = "";
+$email_err = $password_err = "";
+ 
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+ 
+    // Check if username is empty
+    if(empty(trim($_POST["email"]))){
+        $email_err = "Молимо вас да унесете мејл";
+    } else{
+        $email = trim($_POST["email"]);
+    }
+    
+    // Check if password is empty
+    if(empty(trim($_POST["password"]))){
+        $password_err = "Молимо вас да унесете шифру";
+    } else{
+        $password = trim($_POST["password"]);
+    }
+    
+    // Validate credentials
+    if(empty($email_err) && empty($password_err)){
+        // Prepare a select statement
+        $sql = "SELECT organizer_administrator_id, email, password FROM organizer_administrator WHERE email='".$email."'";
+
+        $result = mysqli_query($link,$sql);
+        echo $sql;
+        $temp = mysqli_fetch_array($result);
+        
+        if($temp["email"]==$_POST["email"]){
+
+          if($temp["password"]==$_POST["password"]){
+            
+            session_start();
+            $_SESSION["loggedin"]=true;
+            $_SESSION["email"] = $email;
+            
+            echo"Uspesno logovanje email:".$_SESSION["email"];
+
+          }else{
+            //ovde ce stajati kod za pogresan password
+            echo "Pogresan pass";
+          }
+
+        }else{
+          //ovde stoji kod koji se izvrsi ako ne postoji user sa datim mejlom... npr. prebacivanje na registration.php
+        }
+        
+        
+        
+    
+    // Close connection
+    mysqli_close($link);
+}
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -42,14 +107,14 @@
         <h1>Логовање</h1>
         <div class="form" id="login">
         <table>
-            <form>
+            <form method = "POST" action ="login.php">
                 <tr>
                     
-                    <td>е-mail: <input type="text" name="ime"></td>
+                    <td>е-mail: <input type="text" name="email"></td>
                 </tr>
                 <tr>
                     
-                    <td>Шифра: <input type="password" name="prezime"></td>
+                    <td>Шифра: <input type="password" name="password"></td>
                 </tr>
                 <tr >
                     

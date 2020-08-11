@@ -9,6 +9,7 @@ $i=1;
 
 while($podaci=mysqli_fetch_assoc($rez)){
   
+  $id=$podaci['location_id'];
    $naziv=$podaci['name'];
    $grad=$podaci['city'];
    $opstina=$podaci['municipality'];
@@ -28,7 +29,7 @@ while($podaci=mysqli_fetch_assoc($rez)){
    echo<<<EOT
     <tr>
     <form method="POST" action="update_locations.php">
-    <td>$i. $grad</td>
+    <td><input type="text" name="grad" value=$grad></td>
     <td>$opstina</td>
     <td>$ulica</td>
     <td>$x; $y</td>
@@ -37,7 +38,7 @@ while($podaci=mysqli_fetch_assoc($rez)){
     <td>   <INPUT type="submit" src="assets/update.png" name="update" value="$i" >  </td>
    
     
-    <td><INPUT type="image" src="assets/delete.png" name="delete"  value="" > </td>
+    <td><INPUT type="image" src="assets/delete.png" name="delete"  value=$id > </td>
     </form>
     </tr>
 
