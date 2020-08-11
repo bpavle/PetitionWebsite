@@ -20,8 +20,8 @@ echo <<<EOT
         <div class="dropdown">
           <button class="dropbtn">Организација</button>
           <div class="dropdown-content">
-            <a href="login.html">Улогуј се</a>
-            <a href="registration.html">Регистрација</a>
+            <a href="login.php">Улогуј се</a>
+            <a href="registration.php">Регистрација</a>
           </div>
         </div>
         <a href="contact.html">Контакт</a>
