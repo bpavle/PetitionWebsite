@@ -284,24 +284,12 @@ body {
   padding: 8px;
   height: 25px;
 }
+
 #table td input {
   height: 15px;
-  width: 15px;
-}
-#table td input:hover {
-  height: 20px;
-  width: 20px;
-}
-#table td input:focus {
-  animation: spin 5s;
+  width: 70px;
 }
 
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
 
 #table th {
   padding-top: 12px;

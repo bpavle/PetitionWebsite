@@ -5,7 +5,7 @@ $link=mysqli_connect("localhost:3308", "root","","petition");
 $upit="SELECT * FROM location;";
 
 $rez=mysqli_query($link,$upit);
-$i=1;
+
 
 while($podaci=mysqli_fetch_assoc($rez)){
   
@@ -27,27 +27,27 @@ while($podaci=mysqli_fetch_assoc($rez)){
 
    echo<<<EOT
     <tr>
-    <form method="POST" action="update_locations.php">
-    <td>$i. $grad</td>
+
+    <td>$naziv</td>
+    <td>$grad</td>
     <td>$opstina</td>
     <td>$ulica</td>
     <td>$x; $y</td>
    
     
-    <td>   <INPUT type="submit" src="assets/update.png" name="update" value="$i" >  </td>
-   
-    
-    <td><INPUT type="image" src="assets/delete.png" name="delete"  value="" > </td>
-    </form>
-    </tr>
-
-    
  
+    
+    
+   
+    </tr>
 EOT; 
-  $i++;
+  
+  
 }
 
-
+echo<<<EOT
+  <tr><td></td><td></td><td><td colspan="2"> <button class = "btn" type="submit" name="posalji"><a href="update.html">Измени </a></button></td></td></tr>
+  EOT;
 
 
 /*
