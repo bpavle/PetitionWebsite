@@ -1,39 +1,38 @@
 <?php
+session_start();
+if (isset($_SESSION["status"])) {
+    $id = $_SESSION["id"];
 
-$link=mysqli_connect("localhost:3308", "root","","petition");
+    require_once("config.php");
 
-if (isset($_POST["posalji"])){
+    if (isset($_POST["posalji"])) {
 
-$naslov = $_POST["naslov"];
+        $naslov = $_POST["naslov"];
 
-$datum = $_POST["datum"];
-
-
-$vest=$_POST["message"];
-
-}
+        $datum = $_POST["datum"];
 
 
+        $vest = $_POST["message"];
+    }
 
-$sql = "INSERT INTO news SET
+
+
+    $sql = "INSERT INTO news SET
 
 title='$naslov',
 date='$datum',
 content='$vest',
-organizer_administrator_id=1                           # -mora da postoji id organizatora da bi radilo  
+organizer_administrator_id=$id;                           # -mora da postoji id organizatora da bi radilo  
 
 ";
 
 
-mysqli_query($link,$sql);
+    mysqli_query($link, $sql);
 
-mysqli_close($link);
+    mysqli_close($link);
 
-//vracanje na sign.html
- $newURL = "admin.html";
-header('Location: '.$newURL);
-die(); 
-
-
-
-?>
+    //vracanje na sign.html
+    $newURL = "news.html";
+    header('Location: ' . $newURL);
+    //die();
+}

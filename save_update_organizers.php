@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if (isset($_SESSION["status"]) && $_SESSION["status"] == "admin") {
   require_once("config.php");
 
@@ -28,7 +28,7 @@ if (isset($_SESSION["status"]) && $_SESSION["status"] == "admin") {
       $br_lk = $_POST["br_lk$i"];
 
       $odobren = $_POST["odobren$i"];
-      echo "<br>" . "Odobren $i :" . $odobren . "<br>";
+      //echo "<br>" . "Odobren $i :" . $odobren . "<br>";
       $nevazeci = $_POST["nevazeci$i"];
 
       $lose_preporuke = $_POST["lose_preporuke$i"];
@@ -80,7 +80,7 @@ if (isset($_SESSION["status"]) && $_SESSION["status"] == "admin") {
       if ($odobren != '2') {
         if (isset($_POST["odobren$i"])) {
           $sql = $sql . "approved='" . "1" . "',";
-          echo "JESTE SETOVANO!!!!!!!!!!!!!!!!!!! $odobren";
+          //  echo "JESTE SETOVANO!!!!!!!!!!!!!!!!!!! $odobren";
         } else {
           $sql = $sql . "approved='" . "0" . "',";
           echo "NIJE SETOVANO!!!!!!!!!!!!!!!";
@@ -142,7 +142,7 @@ if (isset($_SESSION["status"]) && $_SESSION["status"] == "admin") {
   //vracanje na sign.html
   $newURL = "organizer.html";
   header('Location: ' . $newURL);
-  die();
+  //die();
 } else {
   echo "НЕМАТЕ ПРИСТУП, УЛОГУЈТЕ СЕ КАО АДМИН!";
   sleep(5);

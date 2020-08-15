@@ -4,8 +4,9 @@ require_once("config.php");
 
 if (!(isset($_SESSION["status"]) && $_SESSION["status"] == "admin")) {
   echo "<h2>МОРАТЕ СЕ УЛОГОВАТИ КАО АДМИН ДА БИСТЕ МЕЊАЛИ ПОДАТКЕ О ОРГАНИЗАТОРИМА</h2>";
-  sleep(10);
-  header("Location: ", "login.php");
+
+  //sleep(10);
+  /*  header("Location: ", "login.php"); */
   die();
 } else {
   $upit = "SELECT * FROM organizer_administrator;";
