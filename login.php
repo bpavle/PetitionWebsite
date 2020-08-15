@@ -29,12 +29,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($email_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT organizer_administrator_id, email, password FROM organizer_administrator WHERE email='".$email."'";
+        $sql = "SELECT organizer_administrator_id, email, password, approved FROM organizer_administrator WHERE email='".$email."'";
 
         $result = mysqli_query($link,$sql);
         echo $sql;
         $temp = mysqli_fetch_array($result);
-        
+        $id = $temp["organizer_administrator_id"];
+        $status = $temp["approved"];
+        if($status==2){
+          $status="admin";
+        }
+        else {
+          $status = "organizer";
+        }
         if($temp["email"]==$_POST["email"]){
 
           if($temp["password"]==$_POST["password"]){
@@ -42,6 +49,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             session_start();
             $_SESSION["loggedin"]=true;
             $_SESSION["email"] = $email;
+            $_SESSION["id"] = $id;
+            $_SESSION["status"] = $status;
             header("Location: index.html");
             echo"Uspesno logovanje email:".$_SESSION["email"];
             

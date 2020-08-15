@@ -1,11 +1,12 @@
 
  <?php
 
-$link=mysqli_connect("localhost:3308", "root","","petition");
+
 
 if (isset($_POST["update"])){
-
+    require_once("config.php");
 $i=1;
+
 while($_POST["id$i"]){
     
     $id=$_POST["id$i"];

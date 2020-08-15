@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <div class="head">
+    <!-- <div class="head">
       <div id="head-content">
       <a href="index.html">
         
@@ -50,32 +50,26 @@
       
     </div>
   </div>
-
+ -->
+    <?php include("fixed.php") ?>
     <div class="content">
       <h1>Измените податке о организаторима:</h1>
       <table id="table">
         <tr>
-            <th>ID (не мења се)</th>
-            <th>Име</th>
-            <th>Презиме</th>
-            <th>e-mail</th>
-            <th>Предлагач</th>
-            <th>Телефон</th>
-            <th>Шифра</th>
-            <th>Број личне карте</th>
-            <th>Одобрен</th>
-            <th>Број неважећих потписа</th>
-            <th>Број лоших препорука</th>
-            <th>Избрисати цео ред?</th>
-
-
-
-         
-          
+          <th>ID (не мења се)</th>
+          <th>Име</th>
+          <th>Презиме</th>
+          <th>e-mail</th>
+          <th>Предлагач</th>
+          <th>Телефон</th>
+          <th>Шифра</th>
+          <th>Број личне карте</th>
+          <th>Одобрен</th>
+          <th>Број неважећих потписа</th>
+          <th>Број лоших препорука</th>
+          <th>Избрисати цео ред?</th>
         </tr>
         <?php include("update_organizers.php")?>
-        
-   
       </table>
     </div>
   </body>

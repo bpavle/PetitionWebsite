@@ -1,20 +1,21 @@
-
 <?php
 session_start();
 
-if(basename($_SERVER["PHP_SELF"])=="locations.html"||
-  basename($_SERVER["PHP_SELF"])=="organizer.html"||
-  basename($_SERVER["PHP_SELF"])=="complete_signatures.html"||
-  basename($_SERVER["PHP_SELF"])=="news_entry.html" ||
-  basename($_SERVER["PHP_SELF"])=="organizer_entry.html"||
-  basename($_SERVER["PHP_SELF"])=="location_entry.html")
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-  header("location: login.php");
-  exit;
-}
-if(!isset($_SESSION["email"])){
-  
-echo <<<EOT
+if (
+  basename($_SERVER["PHP_SELF"]) == "locations.html" ||
+  basename($_SERVER["PHP_SELF"]) == "organizer.html" ||
+  basename($_SERVER["PHP_SELF"]) == "complete_signatures.html" ||
+  basename($_SERVER["PHP_SELF"]) == "news_entry.html" ||
+  basename($_SERVER["PHP_SELF"]) == "organizer_entry.html" ||
+  basename($_SERVER["PHP_SELF"]) == "location_entry.html"
+)
+  if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: login.php");
+    exit;
+  }
+if (!isset($_SESSION["email"])) {
+
+  echo <<<EOT
 
 <div class="head">
       <div id="head-content">
@@ -41,8 +42,9 @@ echo <<<EOT
       </div>
     </div> 
 EOT;
-}
-else{
+} else {
+  $status = $_SESSION['status'];
+  $id = $_SESSION['id'];
   echo <<<EOT
   <div class="head">
   <div id="head-content">
@@ -83,9 +85,8 @@ else{
   </div>
 
   <a href="contact.html">Контакт</a>
-  
+  <p> Улоговани сте као $status id=$id</p>
 </div>
 </div>
 EOT;
 }
-?>

@@ -1,22 +1,22 @@
 <?php
+//session_start();
+if (isset($_SESSION["status"])) {
+  require_once("config.php");
+  $upit = "SELECT * FROM `organizer_administrator` WHERE `approved`<>2;"; //uzimamo sve osim admina koji ima approved polje = 2 ALI STO???
 
-$link=mysqli_connect("localhost:3308", "root","","petition");
+  $rez = mysqli_query($link, $upit);
 
-$upit="SELECT * FROM organizer_administrator;";
+  while ($podaci = mysqli_fetch_assoc($rez)) {
 
-$rez=mysqli_query($link,$upit);
+    $ime = $podaci['name'];
+    $prezime = $podaci['surname'];
+    $mail = $podaci['email'];
+    $telefon = $podaci['phone_number'];
+    $predlagac = $podaci['recommended_by_organizer_id'];
 
-while($podaci=mysqli_fetch_assoc($rez)){
 
-  $ime=$podaci['name'];
-  $prezime=$podaci['surname'];
-  $mail=$podaci['email'];
-  $telefon=$podaci['phone_number'];
-  $predlagac=$podaci['recommended_by_organizer_id'];
- 
-  
-    
-    echo<<<EOT
+
+    echo <<<EOT
     
     <tr>
     <td>$ime</td>
@@ -29,10 +29,16 @@ while($podaci=mysqli_fetch_assoc($rez)){
   
   </tr>
  
-  EOT; 
-}
-echo<<<EOT
-  <tr><td></td><td></td><td></td><td><td colspan="2"> <button class = "btn" type="submit" name="posalji"><a href="update_organizer.html">Измени </a></button></td></td></tr>
   EOT;
-mysqli_close($link);
-?>
+  }
+  if ($_SESSION["status"] == "admin") {
+    echo <<<EOT
+  <tr>  
+  <td></td>
+  <td></td>
+  <td></td>
+  <td><td colspan="2"> <button class = "btn" type="submit" name="posalji"><a href="update_organizer.html">Измени </a></button></td></td></tr>
+  EOT;
+  }
+  mysqli_close($link);
+}

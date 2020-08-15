@@ -76,10 +76,10 @@ mysqli_query($link,$sql);
 mysqli_close($link);
 
 //vracanje na sign.html
-/*  $newURL = "sign.html";
+  $newURL = "sign.html";
 header('Location: '.$newURL);
 die(); 
- */
+ 
 
 
 ?>

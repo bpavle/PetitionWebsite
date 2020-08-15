@@ -1,28 +1,36 @@
 <?php
 
-$link=mysqli_connect("localhost:3308", "root","","petition");
 
 
-$upit="SELECT * FROM location;";
+if (!isset($_SESSION["status"])) {
+  echo "Немате право приступа!";
+} else {
+  if ($_SESSION["status"] == "organizer") {
+    $id = $_SESSION["id"];
+    //echo "ORGANIZER";
+    $upit = "SELECT * FROM location WHERE organizer_administrator_id=$id";
+  } else {
+    $upit = "SELECT * FROM location;";
+  }
+  require_once("config.php");
+  $rez = mysqli_query($link, $upit);
 
-$rez=mysqli_query($link,$upit);
-
-echo<<<EOT
+  echo <<<EOT
 <form method="POST" action="save_update_locations.php">
 
 EOT;
-$i=1;
+  $i = 1;
 
-while($podaci=mysqli_fetch_assoc($rez)){
+  while ($podaci = mysqli_fetch_assoc($rez)) {
 
-  $id=$podaci['location_id'];
-  $naziv=$podaci['name'];
-  $grad=$podaci['city'];
-  $opstina=$podaci['municipality'];
-  $ulica=$podaci['street'];
-  $x=$podaci['x_coordinate'];
-  $y=$podaci['y_coordinate'];
-    echo<<<EOT
+    $id = $podaci['location_id'];
+    $naziv = $podaci['name'];
+    $grad = $podaci['city'];
+    $opstina = $podaci['municipality'];
+    $ulica = $podaci['street'];
+    $x = $podaci['x_coordinate'];
+    $y = $podaci['y_coordinate'];
+    echo <<<EOT
     <tr>
     
     <td><input type="text" name="id$i" value=$id></td>
@@ -43,18 +51,15 @@ while($podaci=mysqli_fetch_assoc($rez)){
     </tr>
   
  
-EOT; 
-$i++;
-}
-echo<<<EOT
+EOT;
+    $i++;
+  }
+  echo <<<EOT
   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td><td colspan="2"> <button class = "btn" type="submit" name="update"> Сачувај </button></td></td></tr>
 EOT;
 
- 
-
-
-mysqli_close($link);
 
 
 
-?>
+  mysqli_close($link);
+}
