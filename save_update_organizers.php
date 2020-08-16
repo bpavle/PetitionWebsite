@@ -75,7 +75,7 @@ if (isset($_SESSION["status"]) && $_SESSION["status"] == "admin") {
         $sql = $sql . "password='" . $sifra . "',";
       if (!empty($br_lk))
         $sql = $sql . "id_number='" . $br_lk . "',";
-      echo "<br>" . "Odobren $i :" . $odobren . "<br>";
+      //  echo "<br>" . "Odobren $i :" . $odobren . "<br>";
       //menjamo approved samo za one koji nisu admini. admin je uvek 2
       if ($odobren != '2') {
         if (isset($_POST["odobren$i"])) {
@@ -83,7 +83,7 @@ if (isset($_SESSION["status"]) && $_SESSION["status"] == "admin") {
           //  echo "JESTE SETOVANO!!!!!!!!!!!!!!!!!!! $odobren";
         } else {
           $sql = $sql . "approved='" . "0" . "',";
-          echo "NIJE SETOVANO!!!!!!!!!!!!!!!";
+          // echo "NIJE SETOVANO!!!!!!!!!!!!!!!";
         }
       }
       if (!empty($nevazeci))
@@ -94,8 +94,8 @@ if (isset($_SESSION["status"]) && $_SESSION["status"] == "admin") {
       $sql = substr($sql, 0, -1); //sklanjamo poslednji zarez iz sql stringa
 
       $sql = $sql . "WHERE organizer_administrator_id=$id;";
-      echo $sql;
-      echo "\n";
+      //echo $sql;
+      //echo "\n";
       /*  $sql = "UPDATE organizer_administrator SET
 
     

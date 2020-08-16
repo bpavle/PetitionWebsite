@@ -14,7 +14,7 @@ if (!(isset($_SESSION["status"]) && $_SESSION["status"] == "admin")) {
   $rez = mysqli_query($link, $upit);
 
   echo <<<EOT
-<form method="POST" action="save_update_organizers.php">
+<form method="POST" action="save_update_organizers.php"  onsubmit="return validateForm()">
 
 EOT;
   $i = 0;
@@ -56,7 +56,7 @@ EOT;
     <td><input type="checkbox" name="odobren$i" value=$odobren $checked></td>
     <td><input type="text" name="nevazeci$i" value=$nevazeci></td>
     <td><input type="text" name="lose_preporuke$i" value=$lose_preporuke></td>
-    <td><input type="checkbox"  name="brisi$i" value="brisi"></td>
+    <td><input id="jsCheckboxId" type="checkbox"  name="brisi$i" value="brisi"></td>
    
    
     

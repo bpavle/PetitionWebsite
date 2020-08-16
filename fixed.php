@@ -74,7 +74,7 @@ EOT;
 EOT;
   }
   echo <<<EOT
-  
+  <a href="work.html"style="background-color: #5cff017d;">Почни са радом</a>
   <a href="complete_signatures.html">Комплетни потписи</a>
  
   <a href="logout.php">Излогујте се</a>
