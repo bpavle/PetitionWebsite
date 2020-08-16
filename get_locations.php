@@ -34,7 +34,12 @@ EOT;
   }
 
   echo <<<EOT
-  <tr><td></td><td></td><td></td><td><td colspan="2"> <button class = "btn" type="submit" name="posalji"><a href="update_location.html">Измени </a></button></td></td></tr>
+  <tr>
+  
+  <td colspan="2"> <button class = "btn" type="submit" name="posalji"><a href="choose_locations.html">Одабери локације </a></button></td>
+  
+  <td colspan="3"> <button class = "btn" type="submit" name="posalji"><a href="update_location.html">Измени </a></button></td>
+  </tr>
   EOT;
 
 

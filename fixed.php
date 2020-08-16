@@ -66,8 +66,14 @@ EOT;
     <div class="dropdown-content">
 
       <a href="locations.html">Локације</a>
-  <a href="organizer.html">Организатори</a>
- 
+  <a href="organizer.html">Организатори</a> 
+EOT;
+  if ($_SESSION["status"] == "admin") {
+    echo <<<EOT
+  <a href="disqualified_organizers.html">Искључени организатори</a>
+EOT;
+  }
+  echo <<<EOT
   
   <a href="complete_signatures.html">Комплетни потписи</a>
  
