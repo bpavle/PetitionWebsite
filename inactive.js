@@ -1,4 +1,4 @@
-var timeoutID;
+/* var timeoutID;
 
 function setup() {
   this.addEventListener("mousemove", resetTimer, false);
@@ -30,3 +30,4 @@ function goInactive() {
 function goActive() {
   startTimer();
 }
+ */

@@ -85,7 +85,7 @@ body {
     rgb(177, 192, 159, 0.5),
     rgb(255, 251, 208, 0.5)
   );
-  overflow: hidden;
+  overflow: auto;
   margin-bottom: -3px;
 }
 .content p {

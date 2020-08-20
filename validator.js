@@ -11,3 +11,4 @@ function validateForm() {
 
   return confirm("Пажња! Обрисаћете следеће редове" + checkboxes);
 }
+//ovu skriptu samo nisam stigao da namestim... Ali u principu ce ovako izgledati.

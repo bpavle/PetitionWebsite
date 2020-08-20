@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Рад</title>
+  </head>
+
+  <body>
+    <?php include("fixed.php") ?>
+    <div class="content">
+      <h1>Почетак рада</h1>
+      <table id="table">
+        <form action="work.php" method="POST">
+          <tr>
+            <th colspan="4">Одаберите термине за прикупљање потписа</th>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="appointments[]" value = "7:00-9:00"/>7:00-9:00</td>
+            <td><input type="checkbox" name="appointments[]" value = "9:00-11:00"/>9:00-11:00</td>
+            <td><input type="checkbox" name="appointments[]" value = "11:00-13:00"/>11:00-13:00</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="appointments[]" value = "13:00-15:00"/>13:00-15:00</td>
+            <td><input type="checkbox" name="appointments[]" value = "15:00-17:00"/>15:00-17:00</td>
+            <td><input type="checkbox" name="appointments[]" value = "17:00-19:00"/>17:00-19:00</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <input type="checkbox" name="appointments[]" value = "19:00-21:00"/>19:00-21:00
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <button class="btn" type="submit" name="posalji">
+                Изабери термине и почни са радом
+              </button>
+            </td>
+          </tr>
+        </form>
+      </table>
+    </div>
+  </body>
+</html>
