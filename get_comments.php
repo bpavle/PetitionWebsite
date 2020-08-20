@@ -19,7 +19,7 @@ while ($podaci = mysqli_fetch_assoc($rez)) {
       </div>
       <hr />
  
-    EOT;
+EOT;
 }
 
 mysqli_close($link);

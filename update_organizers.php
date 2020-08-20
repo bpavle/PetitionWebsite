@@ -9,6 +9,7 @@ if (!(isset($_SESSION["status"]) && $_SESSION["status"] == "admin")) {
   /*  header("Location: ", "login.php"); */
   die();
 } else {
+  echo "<script src='validator.js'></script>";
   $upit = "SELECT * FROM organizer_administrator;";
 
   $rez = mysqli_query($link, $upit);
@@ -56,7 +57,7 @@ EOT;
     <td><input type="checkbox" name="odobren$i" value=$odobren $checked></td>
     <td><input type="text" name="nevazeci$i" value=$nevazeci></td>
     <td><input type="text" name="lose_preporuke$i" value=$lose_preporuke></td>
-    <td><input id="jsCheckboxId" type="checkbox"  name="brisi$i" value="brisi"></td>
+    <td><input id="checkbox$i" type="checkbox"  name="brisi$i" value="brisi"></td>
    
    
     

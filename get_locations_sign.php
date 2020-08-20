@@ -19,7 +19,7 @@ while($podaci=mysqli_fetch_assoc($rez)){
     
     <option value="$i">$grad, $ulica</option>
  
-  EOT; 
+EOT; 
   $i++;
 }
 

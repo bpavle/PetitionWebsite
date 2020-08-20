@@ -34,7 +34,7 @@ if (isset($_SESSION["status"])) {
   
   </tr>
  
-  EOT;
+EOT;
     }
     if ($_SESSION["status"] == "admin") {
       echo <<<EOT
@@ -43,7 +43,7 @@ if (isset($_SESSION["status"])) {
   <td></td>
   <td></td>
   <td><td colspan="2"> <button class = "btn" type="submit" name="posalji"><a href="update_organizer.html">Измени </a></button></td></td></tr>
-  EOT;
+EOT;
     }
   } else {
     $sql = "SELECT * FROM organizer_administrator WHERE approved<>2;";

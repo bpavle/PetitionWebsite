@@ -3,7 +3,7 @@
 
 <?php
 
-$link=mysqli_connect("localhost:3308", "root","","petition");
+require_once("config.php");
 
 $upit="SELECT * FROM news;";
 
@@ -30,7 +30,7 @@ while($podaci=mysqli_fetch_assoc($rez)){
   </dd>
   <hr />
  
-  EOT; 
+EOT; 
 }
 
 mysqli_close($link);

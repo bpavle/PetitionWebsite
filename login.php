@@ -111,8 +111,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </div>
       </div> -->
       <?php include("fixed.php")?>
-<!--       <script src="inactive.js"></script>
- -->
+       <script src="inactive.js"></script>
+
     <div class="content">
         <div class="form-container">
         <h1>Логовање</h1>

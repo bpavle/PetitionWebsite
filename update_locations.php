@@ -5,6 +5,7 @@
 if (!isset($_SESSION["status"])) {
   echo "Немате право приступа!";
 } else {
+  echo "<script src='validator.js'></script>";
   if ($_SESSION["status"] == "organizer") {
     $id = $_SESSION["id"];
     //echo "ORGANIZER";
@@ -16,7 +17,7 @@ if (!isset($_SESSION["status"])) {
   $rez = mysqli_query($link, $upit);
 
   echo <<<EOT
-<form method="POST" action="save_update_locations.php">
+<form onSubmit="return validateForm()" method="POST" action="save_update_locations.php">
 
 EOT;
   $i = 1;
@@ -55,7 +56,7 @@ EOT;
     $i++;
   }
   echo <<<EOT
-  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td><td colspan="2"> <button class = "btn" type="submit" name="update" onclick="validateForm()" > Сачувај </button></td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td><td colspan="2"> <button class = "btn" type="submit" name="update"  > Сачувај </button></td></td></tr>
 EOT;
 
 
@@ -65,28 +66,33 @@ EOT;
 }
 ?>
 
-
+<!-- 
 <script>
 
 function validateForm() {
 
 
-  
-  var i = 0;
-
-  while(document.getElementById("checkbox"i"")) {
-
-  
-    var checkboxes = document.getElementById("checkbox"i"");
+  var br=0;  
+  var i = 1;
+//alert(document.get);
+  while(document.getElementById("checkbox"+i)) {
+//alert("USAO");
+  //document.getElementsByName("brisi"+i);
+    var checkboxes = document.getElementById("checkbox"+i);
     if (checkboxes.checked) {
-      return confirm("Пажња! Да ли сте сигурни да желите да обришете? ");
-      break;
+      br++;
+     
     }
     i++;
   }
+if(br==1){
+  return confirm("Пажња! Да ли сте сигурни да желите да обришете "+br +" ред?");
+}
+else if(br<5){
+return confirm("Пажња! Да ли сте сигурни да желите да обришете "+br +" реда?");
+}
+else {return confirm("Пажња! Да ли сте сигурни да желите да обришете "+br +" редова?");}
 
-  
 }
 
-
-</script>
+</script> -->

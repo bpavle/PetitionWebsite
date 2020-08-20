@@ -47,11 +47,11 @@ while ($podaci = mysqli_fetch_assoc($rez)) {
     <td>$komentar</td>
    
   </tr>
-  EOT;
+EOT;
 }
 if ($_SESSION["status"] == "admin") {
   echo <<<EOT
   <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><td colspan="2"> <button class = "btn" type="submit" name="posalji"><a href="update_complete_signature.html">Измени </a></button></td></td></tr>
-  EOT;
+EOT;
 }
 mysqli_close($link);

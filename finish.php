@@ -12,5 +12,11 @@ if(isset($_SESSION["status"]) && isset($_POST["finish"])){
         mysqli_query($link,$sql);   
     }
 }
-$sql="UPDATE sign set taken_over=0";
-mysqli_query($link,$sql);
+ $sql="UPDATE sign set taken_over=0 where taken_over=2";
+mysqli_query($link,$sql); 
+
+//vracanje na sign.html
+$newURL = "complete_signatures.html";
+header('Location: '.$newURL);
+die(); 
+  

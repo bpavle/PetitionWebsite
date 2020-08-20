@@ -85,7 +85,7 @@ EOT;
 
         //brojimo koliko u kom terminu ima potpisnika
         $signatories_by_appointment_count[$appointment] = mysqli_num_rows($result);
-        echo "Broj potpisnika kojima odgovara termin: " . $appointment . " je " . $signatories_by_appointment_count[$appointment] . "<br>";
+       // echo "Broj potpisnika kojima odgovara termin: " . $appointment . " je " . $signatories_by_appointment_count[$appointment] . "<br>";
 
     }
 
@@ -114,10 +114,10 @@ EOT;
             //echo $signatory["sign_id"] . " ide u niz<br>";
 
         }
-        echo "<br>za ".$appointment;
+       /*  echo "<br>za ".$appointment;
         foreach($signatories_by_appointment[$appointment] as $s){
             echo "<br>".$s["sign_id"];
-        }
+         }*/
 
 
         //sortiramo ljude po blizini
@@ -209,7 +209,7 @@ EOT;
                 }
             } */
 
-            echo"<br>$time_left<br>";
+            //echo"<br>$time_left<br>";
             if ($time_left == 15) {
                 //kada vreme padne na 15 stizemo da uzmemo potpis od potpisnika kod kog smo dosli 
                 $last_signatory[$appointment] = $i + 1;
@@ -238,9 +238,9 @@ EOT;
 
 
 
-        echo "<br>Posledji koji staje je ".$last_signatory[$appointment];
+        //echo "<br>Posledji koji staje je ".$last_signatory[$appointment];
         for ($i = 0; $i < count($signatories_by_appointment[$appointment]) ; $i++) {
-           echo "<br>usao u petlju i=".$i."<br>";
+         //  echo "<br>usao u petlju i=".$i."<br>";
             $sign_id = $signatories_by_appointment[$appointment][$i]["sign_id"];
             $name = $signatories_by_appointment[$appointment][$i]["name"];
             $surname = $signatories_by_appointment[$appointment][$i]["surname"];

@@ -1,14 +1,14 @@
 <?php
 
-$link=mysqli_connect("localhost:3308", "root","","petition");
-
+require_once("config.php");
+echo "<script src='validator.js'></script>";
 
 $upit="SELECT * FROM sign;";
 
 $rez=mysqli_query($link,$upit);
 
 echo<<<EOT
-<form method="POST" action="save_update_complete_signatures.php">
+<form method="POST" action="save_update_complete_signatures.php" onsubmit="return validateForm()">
 
 EOT;
 $i=1;
@@ -45,7 +45,7 @@ while($podaci=mysqli_fetch_assoc($rez)){
     <td><input type="text" name="email_obavestenje$i" value=$email_obavestenje></td>
     <td><input type="text" name="preuzet$i" value=$preuzet></td>
     <td><input type="text" name="komentar$i" value=$komentar></td>
-    <td><input type="checkbox"  name="brisi$i" value="brisi"></td>
+    <td><input type="checkbox" id="checkbox$i"  name="brisi$i" value="brisi"></td>
    
    
     

@@ -40,7 +40,7 @@ EOT;
   
   <td colspan="3"> <button class = "btn" type="submit" name="posalji"><a href="update_location.html">Измени </a></button></td>
   </tr>
-  EOT;
+EOT;
 
 
   mysqli_close($link);
