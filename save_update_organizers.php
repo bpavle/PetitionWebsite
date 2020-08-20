@@ -50,12 +50,44 @@ if (isset($_SESSION["status"]) && $_SESSION["status"] == "admin") {
 
       if (isset($_POST["brisi$i"])) {
 
+        $sql = "SELECT COUNT(*) AS broj FROM organizer_administrator 
+
+        WHERE recommended_by_organizer_id =$id
+
+        ";
+        $result = mysqli_query($link, $sql);
+
+        $arr=mysqli_fetch_assoc($result);
+        if($arr["broj"]!=0){
+          //ne moze se brisati
+        }else{
+        $sql = "DELETE FROM sign 
+
+        WHERE location_id IN (
+          SELECT location_id FROM location WHERE organizer_id_chose=$id)
+
+        ";
+        mysqli_query($link, $sql);
+
+      
+
+     
+        
+        $sql = "DELETE FROM location 
+
+        WHERE organizer_id_chose=$id;
+
+        ";
+        mysqli_query($link, $sql);
+
         $sql = "DELETE FROM organizer_administrator 
 
         WHERE organizer_administrator_id=$id;
 
         ";
         mysqli_query($link, $sql);
+        }
+
       }
 
 

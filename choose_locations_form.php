@@ -4,7 +4,9 @@
 
 if (!isset($_SESSION["status"])) {
     echo "Немате право приступа!";
-} else {
+} elseif($_SESSION["status"]=="admin"){
+    echo"<h1>АДМИН НЕ МОЖЕ БИРАТИ ЛОКАЦИЈЕ!</h1>";
+}else {
     if ($_SESSION["status"] == "organizer") {
         $id = $_SESSION["id"];
         //echo "ORGANIZER";

@@ -20,7 +20,9 @@ Organizator izabere lokacije, tim lokacijama
 
 session_start();
 //echo $_SESSION["status"];
-
+if(isset($_SESSION["status"])&&$_SESSION["status"]=="admin"){
+    echo "АДМИН САМО КОНТРОЛИШЕ! НЕ РАДИ!";
+}else{
 //funkcija koja vraca distancu izmedju dve tacke zadatih koordinata
 function distance($X1, $X2, $Y1, $Y2)
 {
@@ -280,4 +282,5 @@ EOT;
 <tr><td colspan="7"><button class = "btn" type="submit" name="finish"> Сачувај </button></td></tr>
 EOT;
     mysqli_close($link);
+}
 }

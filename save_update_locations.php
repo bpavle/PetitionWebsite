@@ -28,6 +28,14 @@ while($_POST["id$i"]){
 
    if (isset($_POST["brisi$i"])) {
         
+    $sql = "DELETE FROM sign 
+
+    WHERE location_id=$id;
+
+    ";  
+    mysqli_query($link,$sql);
+
+
         $sql = "DELETE FROM location 
 
         WHERE location_id=$id;
