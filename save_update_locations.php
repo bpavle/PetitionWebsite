@@ -27,7 +27,7 @@ while($_POST["id$i"]){
 
 
    if (isset($_POST["brisi$i"])) {
-
+        
         $sql = "DELETE FROM location 
 
         WHERE location_id=$id;
@@ -81,7 +81,5 @@ die();
 ?>
  
  
-
-
 
 
