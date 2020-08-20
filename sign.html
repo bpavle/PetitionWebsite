@@ -1,3 +1,27 @@
+<script>
+    function myFunction(val) {
+        
+
+        var container = document.getElementById("div_termin");
+            // Clear previous contents of the container
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+
+
+        for(i=1; i<=val;i++){
+            var input = document.createElement("input");
+                input.type = "text";
+                input.name = "termin" + i;
+                container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+        }
+      
+    }
+    </script>
+
+
 <!DOCTYPE html>
 
 <head>
@@ -36,13 +60,15 @@
       </div>
     </div> -->
     <!-- <script src="inactive.js"></script -->
-
+        
+        
     <div class="content">
         <div class="form-container">
         <h1>ПОТПИШИ ПЕТИЦИЈУ!</h1>
-        <div class="form">
-        <table>
-            <form method="POST" action="insert_sign.php">
+        <div class="form"  >
+        
+            <form method="POST"  action="insert_sign.php" >
+                <table>
                 <tr>
                     <td> Име:</td>
                     <td colspan="4"> <input type="text" name="ime"></td>
@@ -80,13 +106,14 @@
                     </td>
                 </tr>
                 
-             <!--    <tr>
+                 <tr>
                     <td> Број термина који вам одговарају:</td>
-                    <td> <input type="text" name="broj_termina"></td>
-                </tr> -->
-                <tr>
+                    <td> <input type="text" name="broj_termina" onchange="myFunction(this.value)"></td>
+                </tr> 
+                <tr><td>Унесите термин/е који желите:</td><td><div id="div_termin" >  </div></td></tr> 
+               <!-- <tr>
                     <td> Унесите термине који вам одговарају:</td>
-                    <!-- <td> <input type="text" name="termini"></td> -->
+                                                                         <td> <input type="text" name="termini"></td> 
                     <td >
                     <input type="checkbox" name="termin1" value="7:00-9:00">
                     <label for="termin1">7:00-9:00</label>
@@ -111,6 +138,8 @@
                     <label for="termin7">19:00-21:00</label>
                     </td>
                 </tr>
+            -->
+         
                 <tr>
                     <td> Објавити потпис?</td>
                     <td colspan="4"><input type="radio" name="javno" style="width: unset;" value='1'>ДА
@@ -137,11 +166,15 @@
                 <tr >
                   <td colspan="5"> <button class = "btn" type="submit" name="posalji">Пошаљи</button></td>
                 </tr>
+            </table>
             </form>
-        </table>
+        
        </div>
     </div>
 </div>
+
+
+
 
 </body>
 
