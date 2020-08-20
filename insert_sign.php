@@ -4,6 +4,41 @@ require_once("config.php");
 
 if (isset($_POST["posalji"])){
 
+    $x=1;
+    $termini="";
+  
+    if(isset($_POST["termin1"])){
+        $termini = $termini.$_POST["termin1"].";";
+    }
+    if(isset($_POST["termin2"])){
+        $termini = $termini.$_POST["termin2"].";";
+    }
+    if(isset($_POST["termin3"])){
+        $termini = $termini.$_POST["termin3"].";";
+    }
+    if(isset($_POST["termin4"])){
+        $termini = $termini.$_POST["termin4"].";";
+    }
+    if(isset($_POST["termin5"])){
+        $termini = $termini.$_POST["termin5"].";";
+    }
+    if(isset($_POST["termin6"])){
+        $termini = $termini.$_POST["termin6"].";";
+    }
+    if(isset($_POST["termin7"])){
+        $termini = $termini.$_POST["termin7"].";";
+    }
+    if(isset($_POST["termin8"])){
+        $termini = $termini.$_POST["termin8"].";";
+    }
+        
+
+
+        
+       
+          
+   
+
 $ime = $_POST["ime"];
 echo $ime.'<br>';
 
@@ -20,28 +55,9 @@ $broj_lk = $_POST["broj_lk"];
 echo $broj_lk.'<br>';
 
 $lokacija=$_POST["lokacije"];
-$termini="";
-if(isset($_POST["termin1"])){
-    $termini = $termini.$_POST["termin1"].";";
-}
-if(isset($_POST["termin2"])){
-    $termini = $termini.$_POST["termin2"].";";
-}
-if(isset($_POST["termin3"])){
-    $termini = $termini.$_POST["termin3"].";";
-}
-if(isset($_POST["termin4"])){
-    $termini = $termini.$_POST["termin4"].";";
-}
-if(isset($_POST["termin5"])){
-    $termini = $termini.$_POST["termin5"].";";
-}
-if(isset($_POST["termin6"])){
-    $termini = $termini.$_POST["termin6"].";";
-}
-if(isset($_POST["termin7"])){
-    $termini = $termini.$_POST["termin7"].";";
-}
+
+
+   
 
 $komentar=$_POST["message"];
 
