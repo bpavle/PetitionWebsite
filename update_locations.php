@@ -40,7 +40,7 @@ EOT;
     <td><input type="text" name="ulica$i" value=$ulica></td>
     <td><input type="text" name="x$i" value=$x></td>
     <td><input type="text" name="y$i" value=$y></td>
-    <td><input type="checkbox"  name="brisi$i" value="brisi"></td>
+    <td><input type="checkbox"  name="brisi$i" id="checkbox$i" value="brisi"></td>
    
    
     
@@ -55,7 +55,7 @@ EOT;
     $i++;
   }
   echo <<<EOT
-  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td><td colspan="2"> <button class = "btn" type="submit" name="update"> Сачувај </button></td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td><td colspan="2"> <button class = "btn" type="submit" name="update" onclick="validateForm()" > Сачувај </button></td></td></tr>
 EOT;
 
 
@@ -63,3 +63,30 @@ EOT;
 
   mysqli_close($link);
 }
+?>
+
+
+<script>
+
+function validateForm() {
+
+
+  
+  var i = 0;
+
+  while(document.getElementById("checkbox"i"")) {
+
+  
+    var checkboxes = document.getElementById("checkbox"i"");
+    if (checkboxes.checked) {
+      return confirm("Пажња! Да ли сте сигурни да желите да обришете? ");
+      break;
+    }
+    i++;
+  }
+
+  
+}
+
+
+</script>

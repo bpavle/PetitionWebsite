@@ -62,9 +62,13 @@ $lokacija=$_POST["lokacije"];
 $komentar=$_POST["message"];
 
 
-$preuzet=$_POST["preuzet"];
+$preuzet=0;
 $javno=$_POST["javno"];
 $obavestenja=$_POST["obavestenja"];
+
+$x_coordinate=$_POST["x_coordinate"];
+$y_coordinate=$_POST["y_coordinate"];
+
 }
 
 
@@ -81,8 +85,10 @@ location_id='$lokacija',
 appointments='$termini',
 email_notification='$obavestenja[0]',
 publish='$javno[0]',
-taken_over='$preuzet[0]',
-number=1
+taken_over='$preuzet',
+number=1,
+x_coordinate='$x_coordinate',
+y_coordinate='$y_coordinate'
 
 ";
 echo $sql;

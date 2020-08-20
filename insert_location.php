@@ -32,9 +32,10 @@ city='$grad',
 municipality='$opstina',
 
 street='$ulica',
-organizer_id_chose=$id,
 
-organizer_administrator_id=$id,
+organizer_id_chose='$id',
+
+organizer_administrator_id='$id',
 
 x_coordinate='$x',
 
